@@ -1,0 +1,9 @@
+[0] Config.pm:343> INFO - This is Biber 2.5
+[0] Config.pm:346> INFO - Logfile is 'repport.blg'
+[41] biber:290> INFO - === Sun Jan 28, 2018, 11:34:11
+[139] Biber.pm:352> INFO - Reading 'repport.bcf'
+[291] Biber.pm:774> INFO - Using all citekeys in bib section 0
+[303] Biber.pm:3494> INFO - Processing section 0
+[313] Biber.pm:3658> INFO - Looking for bibtex format file 'bib.bib' for section 0
+[314] Utils.pm:165> ERROR - Can't read bib.bib
+[314] Biber.pm:113> INFO - ERRORS: 1
