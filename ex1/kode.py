@@ -65,7 +65,7 @@ def Rs(rs):
 
 # Index for transmission perpendicular
 def Ts(ts):
-    return ts**2
+    return (np.cos(theta2)/np.cos(theta1))*(n2/n1)*ts**2
 
 # Theoretical
 # Defining material constants
