@@ -1,0 +1,15 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\contentsline {chapter}{Contents}{1}{section*.1}
+\contentsline {section}{\numberline {1}Problem}{1}{section.0.1}
+\contentsline {subsection}{Research method ####1}{1}{section*.2}
+\contentsline {subsubsection}{Planning}{1}{section*.3}
+\contentsline {subsubsection}{Experimental Equipment Available}{1}{section*.4}
+\contentsline {subsubsection}{Critical issues}{1}{section*.5}
+\contentsline {subsubsection}{Strategy}{1}{section*.6}
+\contentsline {subsection}{Setup}{1}{section*.7}
+\contentsline {subsection}{Laboratory setyp}{1}{section*.8}
+\contentsline {subsection}{Raw data}{1}{section*.9}
+\contentsline {subsection}{Fast analysis}{1}{section*.10}
+\contentsline {subsection}{Conclusion}{1}{section*.11}
