@@ -22,15 +22,18 @@ plt.rc('text',usetex =True)
 plt.rc('font', **{'family' : "sans-serif"})
 
 # Definitions (formulaes)
+
 # Snells law
 def snellslaw(theta1, n1, n2):
     theta2 = np.arcsin(n1*np.sin(theta1)/n2)
     return theta2
 
+# Brewsters Angle
 # Angle at which no light is reflected
 def brewsterangle(n1, n2):
     return np.arctan(n2/n1)
 
+# Critical angle
 # Angle for total internal reflection
 def criticalangle(n):
     return np.arcsin(1/n)
@@ -42,6 +45,7 @@ def rp(theta1, theta2):
 # Transmitted parallel
 def tp(theta1, theta2):
     return 2*np.cos(theta1)*np.sin(theta2)/(np.sin(theta1+theta2)*np.cos(theta1-theta2))
+
 
 # Reflected perpendicular
 def rs(theta1, theta2):
@@ -56,23 +60,30 @@ def Rp(rp):
     return rp**2
 
 # Index for transmission parallel
-def Tp(tp):
-    return tp**2
+def Tp1(theta1, theta2):
+    return np.sin(2*theta1)*np.sin(2*theta2)/((np.sin(theta1 + theta2))**2 * (np.cos(theta1 - theta2))**2)
+
+
+def Tp2(theta1, theta2, n1, n2, tp):
+    return np.cos(theta2)/np.cos(theta1) * n2/n1 * tp**2
 
 # Index for reflection perpendicular
 def Rs(rs):
     return rs**2
 
 # Index for transmission perpendicular
-def Ts(ts):
-    return (np.cos(theta2)/np.cos(theta1))*(n2/n1)*ts**2
+def Ts1(theta1, theta2):
+    return np.sin(2*theta1)*np.sin(2*theta2)/(np.sin(theta1+theta2)**2)
+
+def Ts2(theta1, theta2, n1, n2, ts):
+    return np.cos(theta2)/np.cos(theta1) * n2/n1 * ts**2
 
 # Theoretical
 # Defining material constants
 n = np.array([1, 1.5])        # air, glass
 
 # Defining angles
-theta1 = np.arange(1, 90, 0.1) # degrees
+theta1 = np.arange(0, np.pi/2, 0.01) # degrees
 theta2 = np.zeros(np.size(theta1))
 
 # Defining itterable matrices 
@@ -82,7 +93,7 @@ Rs_theory = np.zeros(np.size(theta1))
 Rp_theory = np.zeros(np.size(theta1))
 
 # Calculating theta2 from snell
-itteration = np.arange(0, np.size(theta1), 1)
+itteration = np.arange(1, np.size(theta1), 1)
 for angle in itteration:
     theta2[angle] = snellslaw(theta1[angle], n[0], n[1])
 
@@ -96,19 +107,20 @@ for i in itteration:
 
 
 # Meassurements (raw data)
-Theta2 = np.array([19.47, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25])  # degrees
-Ts = 0.942
-Rs = 0.058 # 1 - Ts
+Theta2 = np.array([2, 4, 5.5, 7, 9, 10.5, 12, 14, 16, 19, 22, 25.5, 28.5, 32,
+    37, 40, 45, 0])  # degrees
+# Meassurements with inverse 
+#Theta3 = 
 
-if np.size(theta1) != np.size(theta2):
-    print('Mangler data for theta2')
+#if np.size(theta1) != np.size(theta2):
+#    print('Mangler data for theta2')
 
 # Theoretic
 plt.figure()
-#plt.plot(theta1, Rp_theory)
-plt.plot(theta1, Rs_theory)
-plt.xlabel(r'Angles $\theta \ [^{\circ}]$')
-plt.ylabel('y--values')
+plt.plot(theta1, Rs_theory, )
+plt.plot(theta1, Rp_theory)
+plt.xlabel(r'Angles $\theta \ [\text{radians}]$')
+plt.ylabel('Rs')
 plt.title('Theoretical plot')
 plt.grid()
 plt.show()
