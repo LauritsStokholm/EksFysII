@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.19)  13 FEB 2018 18:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.19)  18 FEB 2018 15:34
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1568,215 +1568,9 @@ Package csquotes Info: ... configuration file loaded successfully.
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2016/05/14 v3.4 programmable bibliographies (PK/JW/AB)
-
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2013/04/04 v0.2 Provides if(tex) conditional for PDFTeX, XeTeX, 
-and LuaTeX
-)
-(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
-Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count309
-
-(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
-File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-))
-\c@tabx@nest=\count310
-\c@listtotal=\count311
-\c@listcount=\count312
-\c@liststart=\count313
-\c@liststop=\count314
-\c@citecount=\count315
-\c@citetotal=\count316
-\c@multicitecount=\count317
-\c@multicitetotal=\count318
-\c@instcount=\count319
-\c@maxnames=\count320
-\c@minnames=\count321
-\c@maxitems=\count322
-\c@minitems=\count323
-\c@citecounter=\count324
-\c@savedcitecounter=\count325
-\c@uniquelist=\count326
-\c@uniquename=\count327
-\c@refsection=\count328
-\c@refsegment=\count329
-\c@maxextratitle=\count330
-\c@maxextratitleyear=\count331
-\c@maxextrayear=\count332
-\c@maxextraalpha=\count333
-\c@abbrvpenalty=\count334
-\c@highnamepenalty=\count335
-\c@lownamepenalty=\count336
-\c@maxparens=\count337
-\c@parenlevel=\count338
-\blx@tempcnta=\count339
-\blx@tempcntb=\count340
-\blx@tempcntc=\count341
-\blx@maxsection=\count342
-\blx@maxsegment@0=\count343
-\blx@notetype=\count344
-\blx@parenlevel@text=\count345
-\blx@parenlevel@foot=\count346
-\blx@sectionciteorder@0=\count347
-\labelnumberwidth=\skip266
-\labelalphawidth=\skip267
-\biblabelsep=\skip268
-\bibnamesep=\skip269
-\bibinitsep=\skip270
-\bibparsep=\skip271
-\bibhang=\skip272
-\blx@bcfin=\read5
-\blx@bcfout=\write7
-\c@mincomprange=\count348
-\c@maxcomprange=\count349
-\c@mincompwidth=\count350
-Package biblatex Info: Trying to load biblatex default data model...
-Package biblatex Info: ... file 'blx-dm.def' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def)
-Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'authoryear-comp.dbx' not found.
-Package biblatex Info: Trying to load biblatex custom data model...
-Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count351
-\c@savedafterword=\count352
-\c@annotator=\count353
-\c@savedannotator=\count354
-\c@author=\count355
-\c@savedauthor=\count356
-\c@bookauthor=\count357
-\c@savedbookauthor=\count358
-\c@commentator=\count359
-\c@savedcommentator=\count360
-\c@editor=\count361
-\c@savededitor=\count362
-\c@editora=\count363
-\c@savededitora=\count364
-\c@editorb=\count365
-\c@savededitorb=\count366
-\c@editorc=\count367
-\c@savededitorc=\count368
-\c@foreword=\count369
-\c@savedforeword=\count370
-\c@holder=\count371
-\c@savedholder=\count372
-\c@introduction=\count373
-\c@savedintroduction=\count374
-\c@namea=\count375
-\c@savednamea=\count376
-\c@nameb=\count377
-\c@savednameb=\count378
-\c@namec=\count379
-\c@savednamec=\count380
-\c@translator=\count381
-\c@savedtranslator=\count382
-\c@shortauthor=\count383
-\c@savedshortauthor=\count384
-\c@shorteditor=\count385
-\c@savedshorteditor=\count386
-\c@labelname=\count387
-\c@savedlabelname=\count388
-\c@institution=\count389
-\c@savedinstitution=\count390
-\c@lista=\count391
-\c@savedlista=\count392
-\c@listb=\count393
-\c@savedlistb=\count394
-\c@listc=\count395
-\c@savedlistc=\count396
-\c@listd=\count397
-\c@savedlistd=\count398
-\c@liste=\count399
-\c@savedliste=\count400
-\c@listf=\count401
-\c@savedlistf=\count402
-\c@location=\count403
-\c@savedlocation=\count404
-\c@organization=\count405
-\c@savedorganization=\count406
-\c@origlocation=\count407
-\c@savedoriglocation=\count408
-\c@origpublisher=\count409
-\c@savedorigpublisher=\count410
-\c@publisher=\count411
-\c@savedpublisher=\count412
-\c@language=\count413
-\c@savedlanguage=\count414
-\c@pageref=\count415
-\c@savedpageref=\count416
-\shorthandwidth=\skip273
-\shortjournalwidth=\skip274
-\shortserieswidth=\skip275
-\shorttitlewidth=\skip276
-\shortauthorwidth=\skip277
-\shorteditorwidth=\skip278
-Package biblatex Info: Trying to load compatibility code...
-Package biblatex Info: ... file 'blx-compat.def' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2016/05/14 v3.4 biblatex compatibility (PK/JW/AB)
-)
-Package biblatex Info: Trying to load generic definitions...
-Package biblatex Info: ... file 'biblatex.def' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
-File: biblatex.def 2016/05/14 v3.4 biblatex compatibility (PK/JW/AB)
-\c@textcitecount=\count417
-\c@textcitetotal=\count418
-\c@textcitemaxnames=\count419
-\c@biburlnumpenalty=\count420
-\c@biburlucpenalty=\count421
-\c@biburllcpenalty=\count422
-\c@smartand=\count423
-)
-Package biblatex Info: Trying to load bibliography style 'authoryear-comp'...
-Package biblatex Info: ... file 'authoryear-comp.bbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear-comp.bbx
-File: authoryear-comp.bbx 2016/05/14 v3.4 biblatex bibliography style (PK/JW/AB
-)
-Package biblatex Info: Trying to load bibliography style 'authoryear'...
-Package biblatex Info: ... file 'authoryear.bbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
-File: authoryear.bbx 2016/05/14 v3.4 biblatex bibliography style (PK/JW/AB)
-Package biblatex Info: Trying to load bibliography style 'standard'...
-Package biblatex Info: ... file 'standard.bbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-File: standard.bbx 2016/05/14 v3.4 biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count424
-\c@bbx:relatedtotal=\count425
-)))
-Package biblatex Info: Trying to load citation style 'authoryear-comp'...
-Package biblatex Info: ... file 'authoryear-comp.cbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authoryear-comp.cbx
-File: authoryear-comp.cbx 2016/05/14 v3.4 biblatex citation style (PK/JW/AB)
-Package biblatex Info: Redefining '\cite'.
-Package biblatex Info: Redefining '\parencite'.
-Package biblatex Info: Redefining '\footcite'.
-Package biblatex Info: Redefining '\footcitetext'.
-Package biblatex Info: Redefining '\smartcite'.
-Package biblatex Info: Redefining '\textcite'.
-Package biblatex Info: Redefining '\textcites'.
-Package biblatex Info: Redefining '\cites'.
-Package biblatex Info: Redefining '\parencites'.
-Package biblatex Info: Redefining '\footcites'.
-Package biblatex Info: Redefining '\footcitetexts'.
-Package biblatex Info: Redefining '\smartcites'.
-)
-Package biblatex Info: Trying to load configuration file...
-Package biblatex Info: ... file 'biblatex.cfg' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
-File: biblatex.cfg 
-))
 (/usr/share/texlive/texmf-dist/tex/latex/tools/varioref.sty
 Package: varioref 2016/02/16 v1.5c package for extended references (FMi)
-\c@vrcnt=\count426
+\c@vrcnt=\count309
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2016/06/24 v6.83q Hypertext links for LaTeX
@@ -1818,15 +1612,15 @@ Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen292
-\Hy@linkcounter=\count427
-\Hy@pagecounter=\count428
+\Hy@linkcounter=\count310
+\Hy@pagecounter=\count311
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count429
+\Hy@SavedSpaceFactor=\count312
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1839,10 +1633,10 @@ Package hyperref Info: Plain pages OFF on input line 4501.
 Package hyperref Info: Backreferencing OFF on input line 4506.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4735.
-\c@Hy@tempcnt=\count430
+\c@Hy@tempcnt=\count313
 LaTeX Info: Redefining \url on input line 5088.
 \XeTeXLinkMargin=\dimen293
-\Fld@menulength=\count431
+\Fld@menulength=\count314
 \Field@Width=\dimen294
 \Fld@charsize=\dimen295
 Package hyperref Info: Hyper figures OFF on input line 6342.
@@ -1854,30 +1648,30 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6367.
 Package hyperref Info: PDF/A mode OFF on input line 6372.
 LaTeX Info: Redefining \ref on input line 6412.
 LaTeX Info: Redefining \pageref on input line 6416.
-\Hy@abspage=\count432
-\c@Item=\count433
-\c@Hfootnote=\count434
+\Hy@abspage=\count315
+\c@Item=\count316
+\c@Hfootnote=\count317
 )
 (/usr/share/texlive/texmf-dist/tex/latex/memoir/memhfixc.sty
 Package: memhfixc 2013/05/30 v1.17 nameref/hyperref package fixes for memoir cl
 ass
-\c@memhycontfloat=\count435
-\c@Hpagenote=\count436
+\c@memhycontfloat=\count318
+\c@Hpagenote=\count319
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2016/06/24 v6.83q Hyperref driver for pdfTeX
-\Fld@listcount=\count437
-\c@bookmark@seq@number=\count438
+\Fld@listcount=\count320
+\c@bookmark@seq@number=\count321
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip279
+\Hy@SectionHShift=\skip266
 )
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/hypcap.sty
 Package: hypcap 2016/05/16 v1.12 Adjusting the anchors of captions (HO)
@@ -1919,9 +1713,204 @@ File: pppdftex.def 2016/04/19 v0.5f Pdfpages driver for pdfTeX (AM)
 \AM@pagebox=\box62
 \AM@global@opts=\toks38
 \AM@toc@title=\toks39
-\c@AM@survey=\count439
+\c@AM@survey=\count322
 \AM@templatesizebox=\box63
 )
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2016/05/14 v3.4 programmable bibliographies (PK/JW/AB)
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2013/04/04 v0.2 Provides if(tex) conditional for PDFTeX, XeTeX, 
+and LuaTeX
+)
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count323
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count324
+\c@listtotal=\count325
+\c@listcount=\count326
+\c@liststart=\count327
+\c@liststop=\count328
+\c@citecount=\count329
+\c@citetotal=\count330
+\c@multicitecount=\count331
+\c@multicitetotal=\count332
+\c@instcount=\count333
+\c@maxnames=\count334
+\c@minnames=\count335
+\c@maxitems=\count336
+\c@minitems=\count337
+\c@citecounter=\count338
+\c@savedcitecounter=\count339
+\c@uniquelist=\count340
+\c@uniquename=\count341
+\c@refsection=\count342
+\c@refsegment=\count343
+\c@maxextratitle=\count344
+\c@maxextratitleyear=\count345
+\c@maxextrayear=\count346
+\c@maxextraalpha=\count347
+\c@abbrvpenalty=\count348
+\c@highnamepenalty=\count349
+\c@lownamepenalty=\count350
+\c@maxparens=\count351
+\c@parenlevel=\count352
+\blx@tempcnta=\count353
+\blx@tempcntb=\count354
+\blx@tempcntc=\count355
+\blx@maxsection=\count356
+\blx@maxsegment@0=\count357
+\blx@notetype=\count358
+\blx@parenlevel@text=\count359
+\blx@parenlevel@foot=\count360
+\blx@sectionciteorder@0=\count361
+\labelnumberwidth=\skip267
+\labelalphawidth=\skip268
+\biblabelsep=\skip269
+\bibnamesep=\skip270
+\bibinitsep=\skip271
+\bibparsep=\skip272
+\bibhang=\skip273
+\blx@bcfin=\read5
+\blx@bcfout=\write7
+\c@mincomprange=\count362
+\c@maxcomprange=\count363
+\c@mincompwidth=\count364
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'authortitle.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count365
+\c@savedafterword=\count366
+\c@annotator=\count367
+\c@savedannotator=\count368
+\c@author=\count369
+\c@savedauthor=\count370
+\c@bookauthor=\count371
+\c@savedbookauthor=\count372
+\c@commentator=\count373
+\c@savedcommentator=\count374
+\c@editor=\count375
+\c@savededitor=\count376
+\c@editora=\count377
+\c@savededitora=\count378
+\c@editorb=\count379
+\c@savededitorb=\count380
+\c@editorc=\count381
+\c@savededitorc=\count382
+\c@foreword=\count383
+\c@savedforeword=\count384
+\c@holder=\count385
+\c@savedholder=\count386
+\c@introduction=\count387
+\c@savedintroduction=\count388
+\c@namea=\count389
+\c@savednamea=\count390
+\c@nameb=\count391
+\c@savednameb=\count392
+\c@namec=\count393
+\c@savednamec=\count394
+\c@translator=\count395
+\c@savedtranslator=\count396
+\c@shortauthor=\count397
+\c@savedshortauthor=\count398
+\c@shorteditor=\count399
+\c@savedshorteditor=\count400
+\c@labelname=\count401
+\c@savedlabelname=\count402
+\c@institution=\count403
+\c@savedinstitution=\count404
+\c@lista=\count405
+\c@savedlista=\count406
+\c@listb=\count407
+\c@savedlistb=\count408
+\c@listc=\count409
+\c@savedlistc=\count410
+\c@listd=\count411
+\c@savedlistd=\count412
+\c@liste=\count413
+\c@savedliste=\count414
+\c@listf=\count415
+\c@savedlistf=\count416
+\c@location=\count417
+\c@savedlocation=\count418
+\c@organization=\count419
+\c@savedorganization=\count420
+\c@origlocation=\count421
+\c@savedoriglocation=\count422
+\c@origpublisher=\count423
+\c@savedorigpublisher=\count424
+\c@publisher=\count425
+\c@savedpublisher=\count426
+\c@language=\count427
+\c@savedlanguage=\count428
+\c@pageref=\count429
+\c@savedpageref=\count430
+\shorthandwidth=\skip274
+\shortjournalwidth=\skip275
+\shortserieswidth=\skip276
+\shorttitlewidth=\skip277
+\shortauthorwidth=\skip278
+\shorteditorwidth=\skip279
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2016/05/14 v3.4 biblatex compatibility (PK/JW/AB)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2016/05/14 v3.4 biblatex compatibility (PK/JW/AB)
+\c@textcitecount=\count431
+\c@textcitetotal=\count432
+\c@textcitemaxnames=\count433
+\c@biburlnumpenalty=\count434
+\c@biburlucpenalty=\count435
+\c@biburllcpenalty=\count436
+\c@smartand=\count437
+)
+Package biblatex Info: Trying to load bibliography style 'authortitle'...
+Package biblatex Info: ... file 'authortitle.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authortitle.bbx
+File: authortitle.bbx 2016/05/14 v3.4 biblatex bibliography style (PK/JW/AB)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2016/05/14 v3.4 biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count438
+\c@bbx:relatedtotal=\count439
+))
+Package biblatex Info: Trying to load citation style 'authortitle'...
+Package biblatex Info: ... file 'authortitle.cbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authortitle.cbx
+File: authortitle.cbx 2016/05/14 v3.4 biblatex citation style (PK/JW/AB)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+))
 runsystem(which pygmentize && touch repport.aex)...executed.
 
 runsystem(rm repport.aex)...executed.
@@ -1942,31 +1931,30 @@ Package biblatex Info: ... file 'danish.lbx' found.
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/danish.lbx
 File: danish.lbx 2016/05/14 v3.4 biblatex localization (PK/JW/AB)
 )
-(./repport.aux (./introduction.aux))
+(./repport.aux)
 \openout1 = `repport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 14.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 22.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Info: Redefining \microtypecontext on input line 14.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Info: Redefining \microtypecontext on input line 22.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -2024,19 +2012,9 @@ Dictionary: translator-basic-dictionary, Language: English
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2016/03/01 v2.6q siunitx: Abbreviated units
 )
-Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Automatic encoding selection.
-(biblatex)             Assuming data encoding 'utf8'.
-\openout7 = `repport.bcf'.
-
-Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'repport.bbl' not found.
-
-No file repport.bbl.
-Package biblatex Info: Reference section=0 on input line 14.
-Package biblatex Info: Reference segment=0 on input line 14.
 \AtBeginShipoutBox=\box65
-Package hyperref Info: Link coloring ON on input line 14.
+Package hyperref Info: Link coloring ON on input line 22.
+
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -2048,15 +2026,15 @@ LaTeX Info: Redefining \Ref on input line 515.
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 14.
-LaTeX Info: Redefining \ref on input line 14.
-LaTeX Info: Redefining \pageref on input line 14.
-LaTeX Info: Redefining \nameref on input line 14.
+LaTeX Info: Redefining \nameref on input line 22.
+LaTeX Info: Redefining \ref on input line 22.
+LaTeX Info: Redefining \pageref on input line 22.
+LaTeX Info: Redefining \nameref on input line 22.
 (./repport.out) (./repport.out)
 \@outlinefile=\write8
 \openout8 = `repport.out'.
 
-LaTeX Info: Redefining \Ref on input line 14.
+LaTeX Info: Redefining \Ref on input line 22.
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
@@ -2066,36 +2044,46 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout7 = `repport.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'repport.bbl' found.
+ (./repport.bbl)
+Package biblatex Info: Reference section=0 on input line 22.
+Package biblatex Info: Reference segment=0 on input line 22.
 \c__siunitx_mathsf_int=\count447
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 14.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 22.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 14.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 22.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 14.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 22.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 14.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 22.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 14.
+(Font)              <10.95> on input line 22.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 14.
+(Font)              <8> on input line 22.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 14.
-LaTeX Font Info:    Try loading font information for U+msa on input line 14.
+(Font)              <6> on input line 22.
+LaTeX Font Info:    Try loading font information for U+msa on input line 22.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -2103,7 +2091,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 14.
+LaTeX Font Info:    Try loading font information for U+msb on input line 22.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -2111,7 +2099,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 14.
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 22.
 
 
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
@@ -2122,7 +2110,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 \c__siunitx_mathtt_int=\count448
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 14.
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 22.
 
 
 (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
@@ -2133,80 +2121,114 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 17.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 17.
+(Font)              <12> on input line 31.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 31.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 17.
+(Font)              <9> on input line 31.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 17.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 17.
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-\openout2 = `introduction.aux'.
-
- (./introduction.tex
+(Font)              <5> on input line 31.
+ (./abstract.tex) (./introduction.tex
 LaTeX Font Info:    Try loading font information for T1+lmss on input line 1.
- (/usr/share/texmf/tex/latex/lm/t1lmss.fd
+
+(/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.18 \include{introduction}
-                            [1
+) (./theory.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
 
 
-] (./theory.tex) (./setup.tex) (./data.tex)
-(./discussion.tex) (./conclusion.tex)
-<logbook.pdf, id=20, 597.50829pt x 845.0471pt>
-File: logbook.pdf Graphic file (type pdf)
- <use logbook.pdf>
-Package pdftex.def Info: logbook.pdf used on input line 25.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+Overfull \hbox (44.19925pt too wide) in paragraph at lines 33--34
+\T1/lmr/m/n/10.95 (-20) cent-age of the light will be re-fracted/transmitted
+ []
+
+
+Overfull \hbox (27.61118pt too wide) in paragraph at lines 44--44
+[] 
+ []
+
+
+Overfull \hbox (82.41968pt too wide) in paragraph at lines 49--49
+[] 
+ []
+
+
+Overfull \hbox (33.40712pt too wide) in paragraph at lines 53--53
+[] 
+ []
+
+
+Overfull \hbox (42.82372pt too wide) in paragraph at lines 57--57
+[] 
+ []
+
+) (./setup.tex) [2] <logbook.pdf, id=40, 597.50829pt x 845.0471pt>
 File: logbook.pdf Graphic file (type pdf)
 
 <use logbook.pdf>
-Package pdftex.def Info: logbook.pdf used on input line 25.
+Package pdftex.def Info: logbook.pdf used on input line 42.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
- <logbook.pdf, id=23, page=1, 597.50829pt x 845.0471pt>
+File: logbook.pdf Graphic file (type pdf)
+ <use logbook.pdf>
+Package pdftex.def Info: logbook.pdf used on input line 42.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+
+<logbook.pdf, id=43, page=1, 597.50829pt x 845.0471pt>
 File: logbook.pdf Graphic file (type pdf)
 
 <use logbook.pdf, page 1>
-Package pdftex.def Info: logbook.pdf, page1 used on input line 25.
+Package pdftex.def Info: logbook.pdf, page1 used on input line 42.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: logbook.pdf Graphic file (type pdf)
  <use logbook.pdf, page 1>
-Package pdftex.def Info: logbook.pdf, page1 used on input line 25.
+Package pdftex.def Info: logbook.pdf, page1 used on input line 42.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [2
-
-]
+File: logbook.pdf Graphic file (type pdf)
+ <use logbook.pdf, page 1>
+Package pdftex.def Info: logbook.pdf, page1 used on input line 42.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: logbook.pdf Graphic file (type pdf)
 
 <use logbook.pdf, page 1>
-Package pdftex.def Info: logbook.pdf, page1 used on input line 25.
+Package pdftex.def Info: logbook.pdf, page1 used on input line 42.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: logbook.pdf Graphic file (type pdf)
  <use logbook.pdf, page 1>
-Package pdftex.def Info: logbook.pdf, page1 used on input line 25.
+Package pdftex.def Info: logbook.pdf, page1 used on input line 42.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: logbook.pdf Graphic file (type pdf)
- <use logbook.pdf, page 1>
-Package pdftex.def Info: logbook.pdf, page1 used on input line 25.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [3 <./logbook.pdf>]
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
 
-[3 <./logbook.pdf>]
+Overfull \hbox (3.85669pt too wide) in paragraph at lines 46--46
+\T1/lmr/m/it/10.95 (-20) tro-dy-nam-ics\T1/lmr/m/n/10.95 (-20) . Cam-bridge, 20
+17. \T1/lmr/m/sc/10.95 (-20) isbn\T1/lmr/m/n/10.95 (-20) :
+ []
+
+
+Overfull \hbox (8.18315pt too wide) in paragraph at lines 46--46
+\T1/lmr/m/it/10.95 (-20) data\T1/lmr/m/n/10.95 (-20) . Aarhus Uni-ver-sitets-fo
+r-lag, 2012.
+ []
+
 
 FiXme Summary: Number of notes: 0,
 (FiXme)        Number of warnings: 0,
@@ -2214,38 +2236,48 @@ FiXme Summary: Number of notes: 0,
 (FiXme)        Number of fatal errors: 0,
 (FiXme)        Total: 0.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 29.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 29.
-(./repport.aux (./introduction.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 29.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 29.
+[4
+
+
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
+ (./repport.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
 Package rerunfilecheck Info: File `repport.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 895F7305A0FE68737558F9201A0D2898;48.
 Package logreq Info: Writing requests to 'repport.run.xml'.
 \openout1 = `repport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34819 strings out of 493013
- 640301 string characters out of 6135682
- 1250997 words of memory out of 5000000
- 37843 multiletter control sequences out of 15000+600000
- 90245 words of font info for 101 fonts, out of 8000000 for 9000
+ 35082 strings out of 493013
+ 644118 string characters out of 6135682
+ 1266917 words of memory out of 5000000
+ 38051 multiletter control sequences out of 15000+600000
+ 124966 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,18n,80p,10417b,1484s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,18n,80p,10417b,1491s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texm
-f/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public
-/lm/lmssbx10.pfb>
-Output written on repport.pdf (4 pages, 212973 bytes).
+ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/f
+onts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/l
+mr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmsy8.pfb>
+Output written on repport.pdf (4 pages, 294943 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
- 32789 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 164 PDF objects out of 1000 (max. 8388607)
+ 136 compressed objects within 2 object streams
+ 14 named destinations out of 1000 (max. 500000)
+ 43549 words of extra memory for PDF output out of 51595 (max. 10000000)
 
