@@ -1,6 +1,6 @@
 \documentclass[danish, a4paper, 11pt, onecolumn, oneside]{memoir}
-
 \usepackage{preamble}
+\usepackage{pdfpages}
 % EDIT PATH
 %\graphicspath\left\{ ./Graphics/}}
 
@@ -16,12 +16,14 @@
 \maketitle
 \end{titlingpage}
 \include{introduction}
-%\input{theory}
-%\input{setup}
-%\input{data}
-%\input{discussion}
-%\input{konklusion}
-%\input{logbook}
+\input{theory}
+\input{setup}
+\input{data}
+\input{discussion}
+\input{conclusion}
+
+\includepdf{logbook.pdf}
+
 %\nocite{*}
 
 \end{document}
