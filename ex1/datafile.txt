@@ -1,0 +1,41 @@
+Setting the polarization equally 
+
+min intensity: 0
+max intensity: area around 90 degrees
+
+Transmission
+p-polarized
+
+remember that incoming really is 90-noted incoming 
+
+Air --> Glass
+1)
+incoming:0, 10, 20, 30, 40, 50, 60, 70, 80, 90
+outcoming:0, 4, 7, 10, 14, 18.5, 24, 31, 36, 0
+
+2)
+incoming: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90
+outcoming: 0, 2, 3.5, 5, 7, 9, 10, 12, 14, 16.5, 19, 21, 24, 27, 30, 33, 36, ....
+
+
+
+Glass --> air 
+
+1)
+incoming: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50
+outcoming: 0.5, 2, 4, 7, 9, 12.5, 16, 20, 28, (critical angle here)
+
+2) 
+incoming: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45
+outcoming:0, 2, 5, 7, 10, 13, 17, 21, 29, critical angle. 
+
+Reflection 
+p-polarization 
+
+Air --> glass
+
+1) 
+incoming:25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90
+Intensity(V):0.15, 0.2, 0.18, 0.13, 0.081, 0.022, 0.012, 0.041, 0.191, 0.49, 1.03, 1.86, 3.66, 4.5  
+Background: 0.026, 0.023, 0.025, 0.021, 0.018, 0.015, 0.015, 0.018, 0.018, 0.015, 0.013, 0.012, 0.012, 0.013
+
