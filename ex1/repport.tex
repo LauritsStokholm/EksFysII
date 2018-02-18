@@ -11,19 +11,38 @@
 }
 \date{\today}
 
+% BibLateX
+\usepackage[backend=biber, style=authortitle, defernumbers=true, sorting=nty]{biblatex}
+\addbibresource{bibliography.bib}
+\defbibheading{secbib}[\bibname]{%
+    \section*{#1}%
+    \markboth{#1}{#1}}
+
+
 \begin{document}
-\begin{titlingpage}
-\maketitle
-\end{titlingpage}
-\include{introduction}
+% Title og Abstract
+% Ignorerer twocolumn til abstract
+\begin{minipage}{\textwidth}
+    \twocolumn[
+        \maketitle
+        \begin{onecolabstract}
+        \noindent
+            \input{abstract}
+        \end{onecolabstract}]
+\end{minipage}
+\saythanks{}
+
+\input{introduction}
 \input{theory}
 \input{setup}
-\input{data}
-\input{discussion}
-\input{conclusion}
-
+%\input{data}
+%\input{discussion}
+%\input{conclusion}
+\newpage
 \includepdf{logbook.pdf}
 
-%\nocite{*}
-
+\clearpage
+\newpage
+\printbibliography{}
+\nocite{*}
 \end{document}
