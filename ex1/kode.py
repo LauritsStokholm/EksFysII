@@ -105,19 +105,20 @@ for i in itteration:
     rp_theory[i] = rp(theta1[i], theta2[i])
     Rp_theory[i] = Rp(rp_theory[i])
 
-
 # Meassurements (raw data)
-Theta2 = np.array([2, 4, 5.5, 7, 9, 10.5, 12, 14, 16, 19, 22, 25.5, 28.5, 32,
-    37, 40, 45, 0])  # degrees
-# Meassurements with inverse 
-#Theta3 = 
+Theta2 = np.array([2, 4, 5.5, 7, 9, 10.5, 12, 14, 16, 19, 22, 25.5, 28.5, 32, 37, 40, 45, 0])  # degrees
 
-#if np.size(theta1) != np.size(theta2):
-#    print('Mangler data for theta2')
+# Error check for data
+if np.size(theta1) != np.size(theta2):
+    print('Mangler data for theta2')
 
+
+
+
+# Data visualization
 # Theoretic
 plt.figure()
-plt.plot(theta1, Rs_theory, )
+plt.plot(theta1, Rs_theory)
 plt.plot(theta1, Rp_theory)
 plt.xlabel(r'Angles $\theta \ [\text{radians}]$')
 plt.ylabel('Rs')
@@ -125,4 +126,13 @@ plt.title('Theoretical plot')
 plt.grid()
 plt.show()
 
+# Experimental
+plt.figure()
+plt.plot(theta1, Rs_ex)
+plt.plot(theta1, Rp_ex)
+plt.xlabel(r'Angles $\theta \ [\text{radians}]$')
+plt.ylabel('Rs')
+plt.title('Experimental plot')
+plt.grid()
+plt.show()
 

@@ -1,0 +1,139 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Preamble}
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k+kn}{as} \PYG{n+nn}{np}
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib.pyplot} \PYG{k+kn}{as} \PYG{n+nn}{plt}
+
+\PYG{c+c1}{\PYGZsh{} MatploLib koerer TeX}
+\PYG{n}{params} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}legend.fontsize\PYGZsq{}}     \PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}20\PYGZsq{}}\PYG{p}{,}
+          \PYG{l+s+s1}{\PYGZsq{}axes.labelsize\PYGZsq{}}      \PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}20\PYGZsq{}}\PYG{p}{,}
+          \PYG{l+s+s1}{\PYGZsq{}axes.titlesize\PYGZsq{}}      \PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}20\PYGZsq{}}\PYG{p}{,}
+          \PYG{l+s+s1}{\PYGZsq{}xtick.labelsize\PYGZsq{}}     \PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}20\PYGZsq{}}\PYG{p}{,}
+          \PYG{l+s+s1}{\PYGZsq{}ytick.labelsize\PYGZsq{}}     \PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}20\PYGZsq{}}\PYG{p}{,}
+          \PYG{l+s+s1}{\PYGZsq{}legend.numpoints\PYGZsq{}}    \PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{,}
+          \PYG{l+s+s1}{\PYGZsq{}text.latex.preamble\PYGZsq{}} \PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{r\PYGZsq{}\PYGZbs{}usepackage\PYGZob{}siunitx\PYGZcb{}\PYGZsq{}}\PYG{p}{,}
+                                   \PYG{l+s+s1}{r\PYGZsq{}\PYGZbs{}usepackage\PYGZob{}amsmath\PYGZcb{}\PYGZsq{}}\PYG{p}{],}
+          \PYG{l+s+s1}{\PYGZsq{}axes.spines.right\PYGZsq{}}   \PYG{p}{:} \PYG{n+nb+bp}{False}\PYG{p}{,}
+          \PYG{l+s+s1}{\PYGZsq{}axes.spines.top\PYGZsq{}}     \PYG{p}{:} \PYG{n+nb+bp}{False}\PYG{p}{,}
+          \PYG{l+s+s1}{\PYGZsq{}figure.figsize\PYGZsq{}}      \PYG{p}{:} \PYG{p}{[}\PYG{l+m+mf}{8.5}\PYG{p}{,} \PYG{l+m+mf}{6.375}\PYG{p}{],}
+          \PYG{l+s+s1}{\PYGZsq{}legend.frameon\PYGZsq{}}      \PYG{p}{:} \PYG{n+nb+bp}{False}
+          \PYG{p}{\PYGZcb{}}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{rcParams}\PYG{o}{.}\PYG{n}{update}\PYG{p}{(}\PYG{n}{params}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{rc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}text\PYGZsq{}}\PYG{p}{,}\PYG{n}{usetex} \PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{rc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}font\PYGZsq{}}\PYG{p}{,} \PYG{o}{**}\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}family\PYGZsq{}} \PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}sans\PYGZhy{}serif\PYGZdq{}}\PYG{p}{\PYGZcb{})}
+
+\PYG{c+c1}{\PYGZsh{} Definitions (formulaes)}
+
+\PYG{c+c1}{\PYGZsh{} Snells law}
+\PYG{k}{def} \PYG{n+nf}{snellslaw}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{,} \PYG{n}{n1}\PYG{p}{,} \PYG{n}{n2}\PYG{p}{):}
+    \PYG{n}{theta2} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arcsin}\PYG{p}{(}\PYG{n}{n1}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{)}\PYG{o}{/}\PYG{n}{n2}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{theta2}
+
+\PYG{c+c1}{\PYGZsh{} Brewsters Angle}
+\PYG{c+c1}{\PYGZsh{} Angle at which no light is reflected}
+\PYG{k}{def} \PYG{n+nf}{brewsterangle}\PYG{p}{(}\PYG{n}{n1}\PYG{p}{,} \PYG{n}{n2}\PYG{p}{):}
+    \PYG{k}{return} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arctan}\PYG{p}{(}\PYG{n}{n2}\PYG{o}{/}\PYG{n}{n1}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Critical angle}
+\PYG{c+c1}{\PYGZsh{} Angle for total internal reflection}
+\PYG{k}{def} \PYG{n+nf}{criticalangle}\PYG{p}{(}\PYG{n}{n}\PYG{p}{):}
+    \PYG{k}{return} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arcsin}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{n}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Reflection parallel}
+\PYG{k}{def} \PYG{n+nf}{rp}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{,} \PYG{n}{theta2}\PYG{p}{):}
+    \PYG{k}{return} \PYG{n}{np}\PYG{o}{.}\PYG{n}{tan}\PYG{p}{(}\PYG{n}{theta1} \PYG{o}{\PYGZhy{}} \PYG{n}{theta2}\PYG{p}{)} \PYG{o}{/} \PYG{n}{np}\PYG{o}{.}\PYG{n}{tan}\PYG{p}{(}\PYG{n}{theta1} \PYG{o}{+} \PYG{n}{theta2}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Transmitted parallel}
+\PYG{k}{def} \PYG{n+nf}{tp}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{,} \PYG{n}{theta2}\PYG{p}{):}
+    \PYG{k}{return} \PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{)}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{theta2}\PYG{p}{)}\PYG{o}{/}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{theta1}\PYG{o}{+}\PYG{n}{theta2}\PYG{p}{)}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{n}{theta1}\PYG{o}{\PYGZhy{}}\PYG{n}{theta2}\PYG{p}{))}
+
+
+\PYG{c+c1}{\PYGZsh{} Reflected perpendicular}
+\PYG{k}{def} \PYG{n+nf}{rs}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{,} \PYG{n}{theta2}\PYG{p}{):}
+    \PYG{k}{return} \PYG{o}{\PYGZhy{}}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{theta1}\PYG{o}{\PYGZhy{}}\PYG{n}{theta2}\PYG{p}{)} \PYG{o}{/} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{theta1}\PYG{o}{+}\PYG{n}{theta2}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Transmitted perpendicular}
+\PYG{k}{def} \PYG{n+nf}{ts}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{,} \PYG{n}{theta2}\PYG{p}{):}
+    \PYG{k}{return} \PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{)}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{theta2}\PYG{p}{)}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{theta1}\PYG{o}{+}\PYG{n}{theta2}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Index for reflection parallel}
+\PYG{k}{def} \PYG{n+nf}{Rp}\PYG{p}{(}\PYG{n}{rp}\PYG{p}{):}
+    \PYG{k}{return} \PYG{n}{rp}\PYG{o}{**}\PYG{l+m+mi}{2}
+
+\PYG{c+c1}{\PYGZsh{} Index for transmission parallel}
+\PYG{k}{def} \PYG{n+nf}{Tp1}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{,} \PYG{n}{theta2}\PYG{p}{):}
+    \PYG{k}{return} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{theta1}\PYG{p}{)}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{theta2}\PYG{p}{)}\PYG{o}{/}\PYG{p}{((}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{theta1} \PYG{o}{+} \PYG{n}{theta2}\PYG{p}{))}\PYG{o}{**}\PYG{l+m+mi}{2} \PYG{o}{*} \PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{n}{theta1} \PYG{o}{\PYGZhy{}} \PYG{n}{theta2}\PYG{p}{))}\PYG{o}{**}\PYG{l+m+mi}{2}\PYG{p}{)}
+
+
+\PYG{k}{def} \PYG{n+nf}{Tp2}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{,} \PYG{n}{theta2}\PYG{p}{,} \PYG{n}{n1}\PYG{p}{,} \PYG{n}{n2}\PYG{p}{,} \PYG{n}{tp}\PYG{p}{):}
+    \PYG{k}{return} \PYG{n}{np}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{n}{theta2}\PYG{p}{)}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{)} \PYG{o}{*} \PYG{n}{n2}\PYG{o}{/}\PYG{n}{n1} \PYG{o}{*} \PYG{n}{tp}\PYG{o}{**}\PYG{l+m+mi}{2}
+
+\PYG{c+c1}{\PYGZsh{} Index for reflection perpendicular}
+\PYG{k}{def} \PYG{n+nf}{Rs}\PYG{p}{(}\PYG{n}{rs}\PYG{p}{):}
+    \PYG{k}{return} \PYG{n}{rs}\PYG{o}{**}\PYG{l+m+mi}{2}
+
+\PYG{c+c1}{\PYGZsh{} Index for transmission perpendicular}
+\PYG{k}{def} \PYG{n+nf}{Ts1}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{,} \PYG{n}{theta2}\PYG{p}{):}
+    \PYG{k}{return} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{theta1}\PYG{p}{)}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{theta2}\PYG{p}{)}\PYG{o}{/}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{theta1}\PYG{o}{+}\PYG{n}{theta2}\PYG{p}{)}\PYG{o}{**}\PYG{l+m+mi}{2}\PYG{p}{)}
+
+\PYG{k}{def} \PYG{n+nf}{Ts2}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{,} \PYG{n}{theta2}\PYG{p}{,} \PYG{n}{n1}\PYG{p}{,} \PYG{n}{n2}\PYG{p}{,} \PYG{n}{ts}\PYG{p}{):}
+    \PYG{k}{return} \PYG{n}{np}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{n}{theta2}\PYG{p}{)}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{)} \PYG{o}{*} \PYG{n}{n2}\PYG{o}{/}\PYG{n}{n1} \PYG{o}{*} \PYG{n}{ts}\PYG{o}{**}\PYG{l+m+mi}{2}
+
+\PYG{c+c1}{\PYGZsh{} Theoretical}
+\PYG{c+c1}{\PYGZsh{} Defining material constants}
+\PYG{n}{n} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mf}{1.5}\PYG{p}{])}        \PYG{c+c1}{\PYGZsh{} air, glass}
+
+\PYG{c+c1}{\PYGZsh{} Defining angles}
+\PYG{n}{theta1} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} degrees}
+\PYG{n}{theta2} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{size}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{))}
+
+\PYG{c+c1}{\PYGZsh{} Defining itterable matrices }
+\PYG{n}{rs\PYGZus{}theory} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{size}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{))}
+\PYG{n}{rp\PYGZus{}theory} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{size}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{))}
+\PYG{n}{Rs\PYGZus{}theory} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{size}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{))}
+\PYG{n}{Rp\PYGZus{}theory} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{size}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{))}
+
+\PYG{c+c1}{\PYGZsh{} Calculating theta2 from snell}
+\PYG{n}{itteration} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{size}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{),} \PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{k}{for} \PYG{n}{angle} \PYG{o+ow}{in} \PYG{n}{itteration}\PYG{p}{:}
+    \PYG{n}{theta2}\PYG{p}{[}\PYG{n}{angle}\PYG{p}{]} \PYG{o}{=} \PYG{n}{snellslaw}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{[}\PYG{n}{angle}\PYG{p}{],} \PYG{n}{n}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{n}{n}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} Calculating Rs and Rp for plot}
+\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n}{itteration}\PYG{p}{:}
+    \PYG{n}{rs\PYGZus{}theory}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{rs}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],} \PYG{n}{theta2}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])}
+    \PYG{n}{Rs\PYGZus{}theory}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{Rs}\PYG{p}{(}\PYG{n}{rs\PYGZus{}theory}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])}
+
+    \PYG{n}{rp\PYGZus{}theory}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{rp}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],} \PYG{n}{theta2}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])}
+    \PYG{n}{Rp\PYGZus{}theory}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{Rp}\PYG{p}{(}\PYG{n}{rp\PYGZus{}theory}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} Meassurements (raw data)}
+\PYG{n}{Theta2} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mf}{5.5}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+m+mf}{10.5}\PYG{p}{,} \PYG{l+m+mi}{12}\PYG{p}{,} \PYG{l+m+mi}{14}\PYG{p}{,} \PYG{l+m+mi}{16}\PYG{p}{,} \PYG{l+m+mi}{19}\PYG{p}{,} \PYG{l+m+mi}{22}\PYG{p}{,} \PYG{l+m+mf}{25.5}\PYG{p}{,} \PYG{l+m+mf}{28.5}\PYG{p}{,} \PYG{l+m+mi}{32}\PYG{p}{,} \PYG{l+m+mi}{37}\PYG{p}{,} \PYG{l+m+mi}{40}\PYG{p}{,} \PYG{l+m+mi}{45}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{])}  \PYG{c+c1}{\PYGZsh{} degrees}
+
+\PYG{c+c1}{\PYGZsh{} Error check for data}
+\PYG{k}{if} \PYG{n}{np}\PYG{o}{.}\PYG{n}{size}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{)} \PYG{o}{!=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{size}\PYG{p}{(}\PYG{n}{theta2}\PYG{p}{):}
+    \PYG{k}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Mangler data for theta2\PYGZsq{}}\PYG{p}{)}
+
+
+
+
+\PYG{c+c1}{\PYGZsh{} Data visualization}
+\PYG{c+c1}{\PYGZsh{} Theoretic}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{()}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{,} \PYG{n}{Rs\PYGZus{}theory}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{,} \PYG{n}{Rp\PYGZus{}theory}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{r\PYGZsq{}Angles \PYGZdl{}\PYGZbs{}theta \PYGZbs{} [\PYGZbs{}text\PYGZob{}radians\PYGZcb{}]\PYGZdl{}\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Rs\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Theoretical plot\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{()}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{()}
+
+\PYG{c+c1}{\PYGZsh{} Experimental}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{()}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{,} \PYG{n}{Rs\PYGZus{}ex}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{,} \PYG{n}{Rp\PYGZus{}ex}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{r\PYGZsq{}Angles \PYGZdl{}\PYGZbs{}theta \PYGZbs{} [\PYGZbs{}text\PYGZob{}radians\PYGZcb{}]\PYGZdl{}\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Rs\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Experimental plot\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{()}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{()}
+\end{Verbatim}

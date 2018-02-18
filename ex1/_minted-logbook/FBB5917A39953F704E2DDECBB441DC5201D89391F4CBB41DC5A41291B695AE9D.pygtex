@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{get\PYGZus{}path\PYGZus{}leaf}\PYG{p}{(}\PYG{n}{path}\PYG{p}{):}
+    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} return the leaf of a path. \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    \PYG{k}{if} \PYG{o+ow}{not} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{path}\PYG{p}{,} \PYG{n+nb}{str}\PYG{p}{):}
+        \PYG{n}{path} \PYG{o}{=} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{path}\PYG{p}{)}
+    \PYG{n}{head}\PYG{p}{,} \PYG{n}{tail} \PYG{o}{=} \PYG{n}{ntpath}\PYG{o}{.}\PYG{n}{split}\PYG{p}{(}\PYG{n}{path}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{tail} \PYG{o+ow}{or} \PYG{n}{ntpath}\PYG{o}{.}\PYG{n}{basename}\PYG{p}{(}\PYG{n}{head}\PYG{p}{)}
+\end{Verbatim}

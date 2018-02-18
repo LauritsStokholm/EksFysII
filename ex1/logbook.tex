@@ -1,17 +1,38 @@
 \documentclass[a4paper, oneside, onecolumn, 11pt]{memoir}
+\newenvironment{code}{\captionsetup{type=listing}}{}
+
+% Imports
+\usepackage[dvipsnames]{xcolor}
+\usepackage{minted}
+\usepackage{listings}
+
+% Style Minted
+\usemintedstyle{default}
+\definecolor{codebg}{rgb}{0.96,0.96,0.96}
+\newminted{python}{bgcolor=codebg,
+                    linenos=true,
+                    frame=lines,
+                    numbersep=5pt,
+                    fontsize=\footnotesize}
+\renewcommand\listoflistingscaption{LIST OF CODE SNIPPETS}
+\renewcommand\listingscaption{Code Snippet}
+
+% Style Listings
+\AtBeginDocument{\renewcommand*{\thelstlisting}{\thesection.\arabic{lstlisting}}}
 
 %\begin{code}
 %    \caption{Den skrevne Pythonkode.
 %    \label{kode}}
+
 %    \inputminted[firstline=20, lastline=30,
 %        frame=single, framesep=2mm, fontsize=\footnotesize, linenos% Spanning over more than one page!
 %    ]{python}{kode.py}
 %\end{code}
 
-
 % Preamble
 \usepackage{preamble}
-\graphicspath{~/graphics/}
+
+%\graphicspath{~/graphics/}
 
 \title{Logbook}
 \author{Anne Kirstine Knudsen\thanks{email} \and Laurits N. Stokholm\thanks{laurits.stokholm@post.au.dk}}
@@ -65,10 +86,10 @@ Allignment of detector and laserbeam.
 % Did you chose to go differently than originally sketched?
 % Add pictures
 \begin{figure}[h]
+    %\label{fig:setup}
     \centering
-    \includegraphics[width=0.5\textwidht]{setup}
-    \caption{setup}
-    \label{fig:setup}
+    \includegraphics[width=\textwidth]{setup}
+    \caption{Look at me I am a caption!}
 \end{figure}
 
 \subsection{Raw data}
@@ -84,12 +105,28 @@ slit width 2, 0.5 mm
 \subsection{Conclusion}
 % What have you learned?
 % What has or could be done differently for improving the results?
+Her og der og alle vegne, som du kan se på \cref{SourceCode:1}
+
+\begin{code}
+	\caption{Caption}
+	\label{SourceCode:1}
+    \inputminted[firstline=1, lastline=5, frame=single, framesep=2mm, fontsize=\footnotesize, linenos% Spanning over more than one page!
+]{python}{kode.py}
+\end{code}
 
 
-
-
-
-
+\begin{listing}[H]
+\begin{pythoncode}
+def get_path_leaf(path):
+    """ return the leaf of a path. """
+    if not isinstance(path, str):
+        path = str(path)
+    head, tail = ntpath.split(path)
+    return tail or ntpath.basename(head)
+\end{pythoncode}
+\caption{SPARQL Endpoint}
+\label{lst:SPARQL Endpoint}
+\end{listing}
 \end{document}
 
 
