@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.19)  18 FEB 2018 15:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.19)  22 FEB 2018 12:20
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2142,12 +2142,11 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 ) (./theory.tex
-Underfull \hbox (badness 10000) in paragraph at lines 2--3
+Package hyperref Info: bookmark level for unknown fixme defaults to 0 on input 
+line 3.
+FiXme Note: 'insert reference' on input line 3.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
@@ -2155,42 +2154,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
 
 ]
-Overfull \hbox (44.19925pt too wide) in paragraph at lines 33--34
+Overfull \hbox (44.19925pt too wide) in paragraph at lines 32--33
 \T1/lmr/m/n/10.95 (-20) cent-age of the light will be re-fracted/transmitted
  []
 
 
-Overfull \hbox (27.61118pt too wide) in paragraph at lines 44--44
+Overfull \hbox (27.61118pt too wide) in paragraph at lines 43--43
 [] 
  []
 
 
-Overfull \hbox (82.41968pt too wide) in paragraph at lines 49--49
+Overfull \hbox (82.41968pt too wide) in paragraph at lines 48--48
 [] 
  []
 
 
-Overfull \hbox (33.40712pt too wide) in paragraph at lines 53--53
+Overfull \hbox (33.40712pt too wide) in paragraph at lines 52--52
 [] 
  []
 
 
-Overfull \hbox (42.82372pt too wide) in paragraph at lines 57--57
+Overfull \hbox (42.82372pt too wide) in paragraph at lines 56--56
 [] 
  []
 
-) (./setup.tex) [2] <logbook.pdf, id=40, 597.50829pt x 845.0471pt>
+) (./setup.tex <setup.jpg, id=30, 4175.6pt x 3131.7pt>
+File: setup.jpg Graphic file (type jpg)
+ <use setup.jpg>
+Package pdftex.def Info: setup.jpg used on input line 5.
+(pdftex.def)             Requested size: 369.0pt x 276.72775pt.
+
+Overfull \hbox (189.5pt too wide) in paragraph at lines 5--6
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./data.tex) (./discussion.tex) (./conclusion.tex) [2]
+<logbook.pdf, id=43, 597.50829pt x 845.0471pt>
+File: logbook.pdf Graphic file (type pdf)
+ <use logbook.pdf>
+Package pdftex.def Info: logbook.pdf used on input line 42.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: logbook.pdf Graphic file (type pdf)
 
 <use logbook.pdf>
 Package pdftex.def Info: logbook.pdf used on input line 42.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: logbook.pdf Graphic file (type pdf)
- <use logbook.pdf>
-Package pdftex.def Info: logbook.pdf used on input line 42.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-<logbook.pdf, id=43, page=1, 597.50829pt x 845.0471pt>
+ <logbook.pdf, id=46, page=1, 597.50829pt x 845.0471pt>
 File: logbook.pdf Graphic file (type pdf)
 
 <use logbook.pdf, page 1>
@@ -2214,6 +2226,39 @@ File: logbook.pdf Graphic file (type pdf)
 Package pdftex.def Info: logbook.pdf, page1 used on input line 42.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [3 <./logbook.pdf>]
+<logbook.pdf, id=103, page=2, 597.50829pt x 845.0471pt>
+File: logbook.pdf Graphic file (type pdf)
+
+<use logbook.pdf, page 2>
+Package pdftex.def Info: logbook.pdf, page2 used on input line 42.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: logbook.pdf Graphic file (type pdf)
+ <use logbook.pdf, page 2>
+Package pdftex.def Info: logbook.pdf, page2 used on input line 42.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: logbook.pdf Graphic file (type pdf)
+ <use logbook.pdf, page 2>
+Package pdftex.def Info: logbook.pdf, page2 used on input line 42.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+
+[4 <./logbook.pdf>] <logbook.pdf, id=124, page=3, 597.50829pt x 845.0471pt>
+File: logbook.pdf Graphic file (type pdf)
+
+<use logbook.pdf, page 3>
+Package pdftex.def Info: logbook.pdf, page3 used on input line 42.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: logbook.pdf Graphic file (type pdf)
+ <use logbook.pdf, page 3>
+Package pdftex.def Info: logbook.pdf, page3 used on input line 42.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: logbook.pdf Graphic file (type pdf)
+ <use logbook.pdf, page 3>
+Package pdftex.def Info: logbook.pdf, page3 used on input line 42.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+
+[5 <./logbook.pdf>] [6
+
+ <./setup.jpg>]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2230,13 +2275,13 @@ r-lag, 2012.
  []
 
 
-FiXme Summary: Number of notes: 0,
+FiXme Summary: Number of notes: 1,
 (FiXme)        Number of warnings: 0,
 (FiXme)        Number of errors: 0,
 (FiXme)        Number of fatal errors: 0,
-(FiXme)        Total: 0.
+(FiXme)        Total: 1.
 
-[4
+[7
 
 
 
@@ -2253,11 +2298,11 @@ Package logreq Info: Writing requests to 'repport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35082 strings out of 493013
- 644118 string characters out of 6135682
- 1266917 words of memory out of 5000000
- 38051 multiletter control sequences out of 15000+600000
- 124966 words of font info for 131 fonts, out of 8000000 for 9000
+ 35134 strings out of 493013
+ 644801 string characters out of 6135682
+ 1267065 words of memory out of 5000000
+ 38086 multiletter control sequences out of 15000+600000
+ 127795 words of font info for 132 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,18n,80p,10417b,1491s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
@@ -2269,15 +2314,17 @@ onts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10
 /type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></
 usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/l
-mr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fo
-nts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/
-type1/public/lm/lmsy8.pfb>
-Output written on repport.pdf (4 pages, 294943 bytes).
+/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/l
+mr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/font
+s/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss9.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/pub
+lic/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
+Output written on repport.pdf (7 pages, 3208153 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
- 14 named destinations out of 1000 (max. 500000)
- 43549 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 207 PDF objects out of 1000 (max. 8388607)
+ 168 compressed objects within 2 object streams
+ 19 named destinations out of 1000 (max. 500000)
+ 45612 words of extra memory for PDF output out of 51595 (max. 10000000)
 
