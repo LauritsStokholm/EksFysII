@@ -1,6 +1,10 @@
 # Preamble
 import numpy as np
 import matplotlib.pyplot as plt
+import scipy as sp
+from scipy.optimize import curve_fit
+from scipy import optimize as opt
+from scipy import stats 
 
 # MatploLib koerer TeX
 params = {'legend.fontsize'     : '20',
@@ -105,6 +109,10 @@ for i in itteration:
     rp_theory[i] = rp(theta1[i], theta2[i])
     Rp_theory[i] = Rp(rp_theory[i])
 
+#theoretical transmission coefficients (mom's spaghetti)
+Ts_theory = np.ones(np.size(Rs_theory))-Rs_theory
+Tp_theory = np.ones(np.size(Rp_theory))-Rp_theory
+
 # Meassurements (raw data)
 Theta2 = np.array([2, 4, 5.5, 7, 9, 10.5, 12, 14, 16, 19, 22, 25.5, 28.5, 32, 37, 40, 45, 0])  # degrees
 
@@ -113,7 +121,53 @@ if np.size(theta1) != np.size(theta2):
     print('Mangler data for theta2')
 
 
+#experimental data
 
+#P-polarized light, reflection. 
+
+#angles
+
+theta_pr1 = np.array([5, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90])
+Int_pr1 = np.array([0.15, 0.2, 0.18, 0.13, 0.081, 0.022, 0.012, 0.041, 0.191, 0.49, 1.03, 1.86, 3.66, 4.5])
+Background_pr1 = 0.017*np.array([ 0.026, 0.023, 0.025, 0.021, 0.018, 0.015, 0.015, 0.018, 0.018, 0.015, 0.013, 0.012, 0.012, 0.013])
+
+Int_use_pr1 = Int_pr1-Background_pr1
+Int_90 = Int_use_pr1[-1]
+
+Rp_pr1 = Int_use_pr1/Int_90
+
+def radians(theta):
+    return (theta*np.pi)/180
+
+radians_pr1 = radians(theta_pr1)
+
+#P-polarized, transmission
+
+theta_pt1 = np.array([0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85])
+Int_pt1 = np.array([5.5, 5.15, 5.13, 5.17, 5.15, 5.13, 5.15, 5.13, 5.13, 5.13, 5.15, 5.15, 5.15, 5.15, 5.15, 4.6, 3.0, 0.84])
+Background_pt1 = np.ones(np.size(Int_pt1))
+radians_pt1 = radians(theta_pt1)
+
+Int_use_pt1 = Int_pt1-Background_pt1
+Int_0 = Int_use_pt1[0]
+Tp_pt1 = Int_use_pt1/Int_0
+
+#refraction index
+
+theta1_ref = np.array([0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85])
+theta2_ref = np.array([0, 2, 4, 5, 7, 8, 10, 12, 14, 16, 19, 21, 24, 26, 30, 33, 37, 40])
+radians1_ref = radians(theta1_ref)
+radians2_ref = radians(theta2_ref)
+sine1 = np.sin(radians1_ref)
+sine2 = np.sin(radians2_ref)
+
+
+def poly1(x, a, b):
+    return a*x+b
+
+popt, pcov = opt.curve_fit(poly1, sine1, sine2)
+print(popt)
+n_2 = 1/popt[0]
 
 # Data visualization
 # Theoretic
@@ -128,11 +182,36 @@ plt.show()
 
 # Experimental
 plt.figure()
-plt.plot(theta1, Rs_ex)
-plt.plot(theta1, Rp_ex)
+#plt.plot(theta, Rs_ex)
+plt.plot(radians_pr1, Rp_pr1, 'ro')
+plt.plot(theta1, Rs_theory)
+plt.plot(theta1, Rp_theory)
 plt.xlabel(r'Angles $\theta \ [\text{radians}]$')
 plt.ylabel('Rs')
 plt.title('Experimental plot')
 plt.grid()
 plt.show()
 
+#Transmission coefficients
+plt.figure()
+plt.plot(theta1, Ts_theory)
+plt.plot(theta1, Tp_theory)
+plt.plot(radians_pt1, Tp_pt1, 'ro')
+plt.xlabel(r'Angles$\theta \ [\text{radians}]$')
+plt.ylabel('Ts/Tp')
+plt.title('Experimental plot (transmission)')
+plt.grid()
+plt.show()
+
+#Refraction index
+plt.figure()
+plt.plot(sine1,sine2,'bo')
+plt.plot(sine1, poly1(sine1, *popt))
+plt.xlabel(r'Angles$\sin(\theta_1) \ [\text{radians}]$')
+plt.ylabel(r'Angles$\sin(\theta_2) \ [\text{radians}]$')
+plt.title('Snells law')
+plt.grid()
+plt.show()
+
+
+print(n_2)
