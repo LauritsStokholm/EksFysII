@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.19)  22 FEB 2018 12:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.19)  25 FEB 2018 15:50
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2146,130 +2146,144 @@ Package hyperref Info: bookmark level for unknown fixme defaults to 0 on input
 line 3.
 FiXme Note: 'insert reference' on input line 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
-
- []
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+<plane.jpg, id=8, 455.7025pt x 289.08pt>
+File: plane.jpg Graphic file (type jpg)
+ <use plane.jpg>
+Package pdftex.def Info: plane.jpg used on input line 24.
+(pdftex.def)             Requested size: 179.5pt x 113.86995pt.
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Overfull \hbox (44.19925pt too wide) in paragraph at lines 32--33
-\T1/lmr/m/n/10.95 (-20) cent-age of the light will be re-fracted/transmitted
- []
-
-
-Overfull \hbox (27.61118pt too wide) in paragraph at lines 43--43
+Overfull \hbox (80.36407pt too wide) in paragraph at lines 51--51
 [] 
  []
 
-
-Overfull \hbox (82.41968pt too wide) in paragraph at lines 48--48
-[] 
- []
-
-
-Overfull \hbox (33.40712pt too wide) in paragraph at lines 52--52
-[] 
- []
-
-
-Overfull \hbox (42.82372pt too wide) in paragraph at lines 56--56
-[] 
- []
-
-) (./setup.tex <setup.jpg, id=30, 4175.6pt x 3131.7pt>
+) [2 <./plane.jpg>] (./setup.tex <setup.jpg, id=42, 4175.6pt x 3131.7pt>
 File: setup.jpg Graphic file (type jpg)
- <use setup.jpg>
-Package pdftex.def Info: setup.jpg used on input line 5.
-(pdftex.def)             Requested size: 369.0pt x 276.72775pt.
 
-Overfull \hbox (189.5pt too wide) in paragraph at lines 5--6
+<use setup.jpg>
+Package pdftex.def Info: setup.jpg used on input line 6.
+(pdftex.def)             Requested size: 179.5pt x 79.57721pt.
+) (./data.tex <snell.jpg, id=44, 853.1875pt x 639.38875pt>
+File: snell.jpg Graphic file (type jpg)
+
+<use snell.jpg>
+Package pdftex.def Info: snell.jpg used on input line 6.
+(pdftex.def)             Requested size: 184.5pt x 138.26591pt.
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 6--7
+ [][] 
+ []
+
+<reflection.jpg, id=45, 853.1875pt x 639.38875pt>
+File: reflection.jpg Graphic file (type jpg)
+ <use reflection.jpg>
+Package pdftex.def Info: reflection.jpg used on input line 16.
+(pdftex.def)             Requested size: 184.5pt x 138.26591pt.
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 16--17
+ [][] 
+ []
+
+<transmission.jpg, id=46, 853.1875pt x 639.38875pt>
+File: transmission.jpg Graphic file (type jpg)
+ <use transmission.jpg>
+Package pdftex.def Info: transmission.jpg used on input line 28.
+(pdftex.def)             Requested size: 184.5pt x 138.26591pt.
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 28--29
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./data.tex) (./discussion.tex) (./conclusion.tex) [2]
-<logbook.pdf, id=43, 597.50829pt x 845.0471pt>
+) [3
+
+ <./setup.jpg> <./snell.jpg> <./reflection.jpg>] [4
+
+ <./transmission.jpg>]
+(./discussion.tex) (./conclusion.tex)
+<logbook.pdf, id=69, 597.50829pt x 845.0471pt>
 File: logbook.pdf Graphic file (type pdf)
  <use logbook.pdf>
-Package pdftex.def Info: logbook.pdf used on input line 42.
+Package pdftex.def Info: logbook.pdf used on input line 46.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: logbook.pdf Graphic file (type pdf)
 
 <use logbook.pdf>
-Package pdftex.def Info: logbook.pdf used on input line 42.
+Package pdftex.def Info: logbook.pdf used on input line 46.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
- <logbook.pdf, id=46, page=1, 597.50829pt x 845.0471pt>
+ <logbook.pdf, id=72, page=1, 597.50829pt x 845.0471pt>
 File: logbook.pdf Graphic file (type pdf)
 
 <use logbook.pdf, page 1>
-Package pdftex.def Info: logbook.pdf, page1 used on input line 42.
+Package pdftex.def Info: logbook.pdf, page1 used on input line 46.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: logbook.pdf Graphic file (type pdf)
  <use logbook.pdf, page 1>
-Package pdftex.def Info: logbook.pdf, page1 used on input line 42.
+Package pdftex.def Info: logbook.pdf, page1 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: logbook.pdf Graphic file (type pdf)
  <use logbook.pdf, page 1>
-Package pdftex.def Info: logbook.pdf, page1 used on input line 42.
+Package pdftex.def Info: logbook.pdf, page1 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: logbook.pdf Graphic file (type pdf)
 
 <use logbook.pdf, page 1>
-Package pdftex.def Info: logbook.pdf, page1 used on input line 42.
+Package pdftex.def Info: logbook.pdf, page1 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: logbook.pdf Graphic file (type pdf)
  <use logbook.pdf, page 1>
-Package pdftex.def Info: logbook.pdf, page1 used on input line 42.
+Package pdftex.def Info: logbook.pdf, page1 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [3 <./logbook.pdf>]
-<logbook.pdf, id=103, page=2, 597.50829pt x 845.0471pt>
+ [5
+
+
+ <./logbook.pdf>]
+<logbook.pdf, id=129, page=2, 597.50829pt x 845.0471pt>
 File: logbook.pdf Graphic file (type pdf)
 
 <use logbook.pdf, page 2>
-Package pdftex.def Info: logbook.pdf, page2 used on input line 42.
+Package pdftex.def Info: logbook.pdf, page2 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: logbook.pdf Graphic file (type pdf)
  <use logbook.pdf, page 2>
-Package pdftex.def Info: logbook.pdf, page2 used on input line 42.
+Package pdftex.def Info: logbook.pdf, page2 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: logbook.pdf Graphic file (type pdf)
  <use logbook.pdf, page 2>
-Package pdftex.def Info: logbook.pdf, page2 used on input line 42.
+Package pdftex.def Info: logbook.pdf, page2 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 
-[4 <./logbook.pdf>] <logbook.pdf, id=124, page=3, 597.50829pt x 845.0471pt>
+[6 <./logbook.pdf>] <logbook.pdf, id=150, page=3, 597.50829pt x 845.0471pt>
 File: logbook.pdf Graphic file (type pdf)
 
 <use logbook.pdf, page 3>
-Package pdftex.def Info: logbook.pdf, page3 used on input line 42.
+Package pdftex.def Info: logbook.pdf, page3 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: logbook.pdf Graphic file (type pdf)
  <use logbook.pdf, page 3>
-Package pdftex.def Info: logbook.pdf, page3 used on input line 42.
+Package pdftex.def Info: logbook.pdf, page3 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: logbook.pdf Graphic file (type pdf)
  <use logbook.pdf, page 3>
-Package pdftex.def Info: logbook.pdf, page3 used on input line 42.
+Package pdftex.def Info: logbook.pdf, page3 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 
-[5 <./logbook.pdf>] [6
-
- <./setup.jpg>]
+[7 <./logbook.pdf>]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 
-Overfull \hbox (3.85669pt too wide) in paragraph at lines 46--46
+Overfull \hbox (3.85669pt too wide) in paragraph at lines 50--50
 \T1/lmr/m/it/10.95 (-20) tro-dy-nam-ics\T1/lmr/m/n/10.95 (-20) . Cam-bridge, 20
 17. \T1/lmr/m/sc/10.95 (-20) isbn\T1/lmr/m/n/10.95 (-20) :
  []
 
 
-Overfull \hbox (8.18315pt too wide) in paragraph at lines 46--46
+Overfull \hbox (8.18315pt too wide) in paragraph at lines 50--50
 \T1/lmr/m/it/10.95 (-20) data\T1/lmr/m/n/10.95 (-20) . Aarhus Uni-ver-sitets-fo
 r-lag, 2012.
  []
@@ -2281,28 +2295,28 @@ FiXme Summary: Number of notes: 1,
 (FiXme)        Number of fatal errors: 0,
 (FiXme)        Total: 1.
 
-[7
+[8
 
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
  (./repport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
 Package rerunfilecheck Info: File `repport.out' has not changed.
-(rerunfilecheck)             Checksum: 895F7305A0FE68737558F9201A0D2898;48.
+(rerunfilecheck)             Checksum: 7EB6707A63159C23323BD40955EE4FD0;48.
 Package logreq Info: Writing requests to 'repport.run.xml'.
 \openout1 = `repport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35134 strings out of 493013
- 644801 string characters out of 6135682
- 1267065 words of memory out of 5000000
- 38086 multiletter control sequences out of 15000+600000
- 127795 words of font info for 132 fonts, out of 8000000 for 9000
+ 35184 strings out of 493013
+ 645494 string characters out of 6135682
+ 1265686 words of memory out of 5000000
+ 38111 multiletter control sequences out of 15000+600000
+ 128127 words of font info for 136 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,18n,80p,10417b,1491s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
@@ -2321,10 +2335,10 @@ s/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss9.pfb>
 pe1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
-Output written on repport.pdf (7 pages, 3208153 bytes).
+Output written on repport.pdf (8 pages, 3522688 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 168 compressed objects within 2 object streams
- 19 named destinations out of 1000 (max. 500000)
- 45612 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 230 PDF objects out of 1000 (max. 8388607)
+ 185 compressed objects within 2 object streams
+ 31 named destinations out of 1000 (max. 500000)
+ 45638 words of extra memory for PDF output out of 51595 (max. 10000000)
 

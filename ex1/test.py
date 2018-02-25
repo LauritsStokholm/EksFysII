@@ -25,26 +25,6 @@ plt.rcParams.update(params)
 plt.rc('text',usetex =True)
 plt.rc('font', **{'family' : "sans-serif"})
 
-# Ophobningslov
-def konf(X, Y, sds):
-    # X = np.array(x1, x2, x3, ... xn)
-    # hvor xi = np.array([1, 2, 3, 4, ... n]) (uafhængig / her vinkel)
-    # Y = np.array([1, 2, 3, ... n])
-    # sds = np.array([a, b, c, ... n]) # selvvalgte n tal
-
-    dX = np.zeros(1)
-
-    for i in range(0, np.size(dX)+1):
-        dX[i] = np.diff(Y) / np.diff(X[i])
-
-    errr = dX *sds
-    sigma = np.sqrt(sum(errr**2))
-    #sigma_array = np.ones(np.size(Y)) * sigma
-
-    #konf = np.array([Y-sigma_array], [Y+sigma_array])
-
-    return(sigma)
-
 # Definitions (formulaes)
 
 # Snells law
@@ -70,7 +50,6 @@ def rp(theta1, theta2):
 def tp(theta1, theta2):
     return 2*np.cos(theta1)*np.sin(theta2)/(np.sin(theta1+theta2)*np.cos(theta1-theta2))
 
-
 # Reflected perpendicular
 def rs(theta1, theta2):
     return -np.sin(theta1-theta2) / np.sin(theta1+theta2)
@@ -87,7 +66,6 @@ def Rp(rp):
 def Tp1(theta1, theta2):
     return np.sin(2*theta1)*np.sin(2*theta2)/((np.sin(theta1 + theta2))**2 * (np.cos(theta1 - theta2))**2)
 
-
 def Tp2(theta1, theta2, n1, n2, tp):
     return np.cos(theta2)/np.cos(theta1) * n2/n1 * tp**2
 
@@ -102,64 +80,61 @@ def Ts1(theta1, theta2):
 def Ts2(theta1, theta2, n1, n2, ts):
     return np.cos(theta2)/np.cos(theta1) * n2/n1 * ts**2
 
+
+# # # # # # # # # # # # # # # # # # # # # # #
+
 # Theoretical
-# Defining material constants
-n = np.array([1, 1.5])        # air, glass
 
-# Defining angles
-theta1 = np.arange(0, np.pi/2, 0.01) # degrees
-theta2 = np.zeros(np.size(theta1))
-
-# Defining itterable matrices 
-rs_theory = np.zeros(np.size(theta1))
-rp_theory = np.zeros(np.size(theta1))
-Rs_theory = np.zeros(np.size(theta1))
-Rp_theory = np.zeros(np.size(theta1))
-
-# Calculating theta2 from snell
-itteration = np.arange(1, np.size(theta1), 1)
-for angle in itteration:
-    theta2[angle] = snellslaw(theta1[angle], n[0], n[1])
-
-# Calculating Rs and Rp for plot
-for i in itteration:
-    rs_theory[i] = rs(theta1[i], theta2[i])
-    Rs_theory[i] = Rs(rs_theory[i])
-
-    rp_theory[i] = rp(theta1[i], theta2[i])
-    Rp_theory[i] = Rp(rp_theory[i])
-
-#theoretical transmission coefficients (mom's spaghetti)
-# T = 1 - R
-Ts_theory = np.ones(np.size(Rs_theory))-Rs_theory
-Tp_theory = np.ones(np.size(Rp_theory))-Rp_theory
+def theoretical():
+    # Defining material constants
+    n = np.array([1, 1.5])        # air, glass
+    
+    # Defining angles in radians
+    theta1 = np.arange(0, np.pi/2, 0.01)
+    theta2 = np.zeros(np.size(theta1))
+    
+    # Defining itterable matrices 
+    rs_theory = np.zeros(np.size(theta1))
+    rp_theory = np.zeros(np.size(theta1))
+    Rs_theory = np.zeros(np.size(theta1))
+    Rp_theory = np.zeros(np.size(theta1))
+    
+    # Calculating theta2 from Snell's law
+    itteration = np.arange(1, np.size(theta1), 1)
+    for angle in itteration:
+        theta2[angle] = snellslaw(theta1[angle], n[0], n[1])
+    
+    # Calculating Rs and Rp for plot
+    for i in itteration:
+        rs_theory[i] = rs(theta1[i], theta2[i])
+        Rs_theory[i] = Rs(rs_theory[i])
+    
+        rp_theory[i] = rp(theta1[i], theta2[i])
+        Rp_theory[i] = Rp(rp_theory[i])
+    
+    #theoretical transmission coefficients (mom's spaghetti)
+    # T = 1 - R
+    Ts_theory = np.ones(np.size(Rs_theory))-Rs_theory
+    Tp_theory = np.ones(np.size(Rp_theory))-Rp_theory
+    
+    return(theta1, theta2, Rs_theory, Rp_theory)
 
 
 # Meassurements (raw data)
 
-# First day of meassurements
-# Without Intensity (pure angles)
-Theta2 = np.array([2, 4, 5.5, 7, 9, 10.5, 12, 14, 16, 19, 22, 25.5, 28.5, 32, 37, 40, 45, 0])  # degrees
+# p-polarized light, reflection. 
 
+# Importing data
+data = np.genfromtxt('data.csv', skip_header=1, comments="#", usecols=(0,1,2,3,4), delimiter = ',').T
 
-# Second day of meassurements
-# P-polarized light, reflection. 
-# Angles
-theta_pr1 = np.array([5, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90])
-
-# Intensity
-Int_pr1 = np.array([0.15, 0.2, 0.18, 0.13, 0.081, 0.022, 0.012, 0.041, 0.191, 0.49, 1.03, 1.86, 3.66, 4.5])
-
-# Background intensity (noise)
-Background_pr1 = 0.017*np.array([ 0.026, 0.023, 0.025, 0.021, 0.018, 0.015, 0.015, 0.018, 0.018, 0.015, 0.013, 0.012, 0.012, 0.013])
-
-# Intensity minus background
-Int_use_pr1 = Int_pr1 - Background_pr1
+# Angles, intensity
+theta_pr1 = data[0]
+Int_use_pr1 = data[3]
 
 # Intensity at 90 degrees (last meassurement)
 Int_90 = Int_use_pr1[-1]
 
-# Meassurements divided by maximal angle
+## Relative (Meassurements divided by max angle/ max intensity)
 Rp_pr1 = Int_use_pr1/Int_90
 
 def radians(theta):
@@ -167,15 +142,18 @@ def radians(theta):
 
 radians_pr1 = radians(theta_pr1)
 
-#P-polarized, transmission
+# # # # # # # # # # # # # # # # # # #    
+# p-polarized, transmission
+# # # # # # # # # # # # # # # # # # #    
 
 # Angles
-theta_pt1 = np.array([0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85])
+theta_pt1 = np.arange(0, 90, 5) # 0 to 85 in steps of 5
+
 #Converted to radians
 radians_pt1 = radians(theta_pt1)
 
 # Intensities (meassured)
-Int_pt1 = np.array([5.5, 5.15, 5.13, 5.17, 5.15, 5.13, 5.15, 5.13, 5.13, 5.13, 5.15, 5.15, 5.15, 5.15, 5.15, 4.6, 3.0, 0.84])
+Int_pt1 = data[4]
 
 # Backgroind intensity
 Background_pt1 = np.ones(np.size(Int_pt1))
@@ -188,45 +166,47 @@ Int_0 = Int_use_pt1[0]
 
 # Meassurements divided by maximum refraction
 Tp_pt1 = Int_use_pt1/Int_0
+#
+##refraction index
+#
+#theta1_ref = np.array([0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85])
+#theta2_ref = np.array([0, 2, 4, 5, 7, 8, 10, 12, 14, 16, 19, 21, 24, 26, 30, 33, 37, 40])
+#radians1_ref = radians(theta1_ref)
+#radians2_ref = radians(theta2_ref)
+#sine1 = np.sin(radians1_ref)
+#sine2 = np.sin(radians2_ref)
+
+
+#def poly1(x, a, b):
+#    return a*x+b
+#
+#popt, pcov = opt.curve_fit(poly1, sine1, sine2)
+#print(popt)
+#n_2 = 1/popt[0]
+#
+## Error (konfidensinterval)
+#sds = 0.5
+#
+##konf_minus = konf(theta1_pr1, Rp_pr1,sds)[0]
+##konf_plus  = konf(theta1_pr1, Rp_pr1,sds)[1]
+#sigma = konf(theta_pr1, Rp_pr1,sds)
 
 
 
-#refraction index
-
-theta1_ref = np.array([0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85])
-theta2_ref = np.array([0, 2, 4, 5, 7, 8, 10, 12, 14, 16, 19, 21, 24, 26, 30, 33, 37, 40])
-radians1_ref = radians(theta1_ref)
-radians2_ref = radians(theta2_ref)
-sine1 = np.sin(radians1_ref)
-sine2 = np.sin(radians2_ref)
-
-
-def poly1(x, a, b):
-    return a*x+b
-
-popt, pcov = opt.curve_fit(poly1, sine1, sine2)
-print(popt)
-n_2 = 1/popt[0]
-
-# Error (konfidensinterval)
-sds = 0.5
-
-#konf_minus = konf(theta1_pr1, Rp_pr1,sds)[0]
-#konf_plus  = konf(theta1_pr1, Rp_pr1,sds)[1]
-sigma = konf(theta_pr1, Rp_pr1,sds)
-
-
+# # # # # # # # # # # # # # # # # # # # # # #
 
 # Data visualization
 # Theoretic
-#plt.figure()
-#plt.title('Theoretical plot')
-#plt.plot(theta1, Rs_theory)
-#plt.plot(theta1, Rp_theory)
-#plt.xlabel(r'Angles $\theta \ [\text{radians}]$')
-#plt.ylabel('Rs')
-#plt.grid()
-#plt.savefig('theory.jpg')
+
+theta1, theta2, Rs_theory, Rp_theory = theoretical()
+plt.figure()
+plt.title('Theoretical plot')
+plt.plot(theta1, Rs_theory)
+plt.plot(theta1, Rp_theory)
+plt.xlabel(r'Angles $\theta \ [\text{radians}]$')
+plt.ylabel('Rs')
+plt.grid()
+plt.savefig('theory.jpg')
 
 # Experimental
 plt.figure()
@@ -265,5 +245,4 @@ plt.grid()
 plt.savefig('snell.jpg')
 
 
-print(n_2)
 plt.show()
