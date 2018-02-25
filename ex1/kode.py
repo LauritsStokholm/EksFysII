@@ -228,10 +228,22 @@ popt, pcov = opt.curve_fit(poly1, sine1, sine2)
 print(popt)
 n_2 = 1/popt[0]
 
+#Spredninger er lort 
 
+sds = radians(3)
 
+def spredning(X,Y,sds):
+    diff_X = np.diff(Y)/np.diff(X)
+    print(diff_X)
+    sigma = np.zeros(np.size(X))
+    for i in range(0, np.size(diff_X)):
+        sigma[i] = np.sqrt((diff_X[i]*sds)**2)
+    return sigma
 
-
+yerr_pr1 = spredning(radians_pr1,Rp_pr1,sds)
+yerr_sr1 = spredning(radians_sr1, Rs_exp_ag, sds)
+yerr_pt1 = spredning(radians_pt1, Tp_pt1, sds)
+yerr_st1 = 
 
 
 # Data visualization
@@ -243,19 +255,18 @@ plt.xlabel(r'Angles $\theta \ [\text{radians}]$')
 plt.ylabel('Rs')
 plt.title('Theoretical plot')
 plt.grid()
-plt.show()
+
 
 # Experimental
 plt.figure()
 #plt.plot(theta, Rs_ex)
-plt.plot(radians_pr1, Rp_pr1, 'ro')
+plt.errorbar(radians_pr1, Rp_pr1, xerr=0, yerr=yerr_pr1)
 plt.plot(theta1, Rs_theory)
 plt.plot(theta1, Rp_theory)
 plt.xlabel(r'Angles $\theta \ [\text{radians}]$')
 plt.ylabel('Rs')
 plt.title('Experimental plot')
 plt.grid()
-plt.show()
 
 #Transmission coefficients
 plt.figure()
@@ -267,7 +278,6 @@ plt.xlabel(r'Angles$\theta \ [\text{radians}]$')
 plt.ylabel('Ts/Tp')
 plt.title('Experimental plot (transmission)')
 plt.grid()
-plt.show()
 
 #fuck-up graf
 
@@ -278,7 +288,6 @@ plt.xlabel(r'Angles$\theta \ [\text{radians}]$')
 plt.ylabel('Rs')
 plt.title('Experimental plot (transmission)')
 plt.grid()
-plt.show()
 
 #Refraction index
 plt.figure()
@@ -288,7 +297,7 @@ plt.xlabel(r'Angles$\sin(\theta_1) \ [\text{radians}]$')
 plt.ylabel(r'Angles$\sin(\theta_2) \ [\text{radians}]$')
 plt.title('Snells law')
 plt.grid()
-plt.show()
+#plt.show()
 
 #Transmission glass to air 
 plt.figure()
@@ -302,4 +311,3 @@ plt.show()
 
 
 
-print(n_2)
