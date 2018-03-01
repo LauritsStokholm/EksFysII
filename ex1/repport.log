@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.13)  1 MAR 2018 12:27
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.19)  1 MAR 2018 12:29
->>>>>>> b3f40b2c7c982b6a4e991849bc05ac3946228128
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.13)  1 MAR 2018 20:55
 entering extended mode
 **./repport.tex
 (repport.tex
@@ -2079,29 +2075,7 @@ Package biblatex Info: ... file 'danish.lbx' found.
 ("C:\Users\Bruger\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblatex\lbx\dani
 sh.lbx"
 File: danish.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
-) (repport.aux
-! Undefined control sequence.
-l.21 \abx@aux@sortscheme
-                        {nty}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.21 \abx@aux@sortscheme{n
-                          ty}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-)
+) (repport.aux)
 \openout1 = `repport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
@@ -2118,7 +2092,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 22.
- ("C:\Users\Bruger\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+
+("C:\Users\Bruger\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 22.
@@ -2418,257 +2393,184 @@ Package microtype Info: Loading generic protrusion settings for font family
 Package hyperref Info: bookmark level for unknown fixme defaults to 0 on input 
 line 3.
 FiXme Note: 'insert reference' on input line 3.
-
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
-
- []
-
-[1{C:/Users/Bruger/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-
-]
-Overfull \hbox (44.19925pt too wide) in paragraph at lines 32--33
-\T1/lmr/m/n/10.95 (-20) cent-age of the light will be re-fracted/transmitted
- []
-
-
-Overfull \hbox (27.61118pt too wide) detected at line 43
-[]
-=======
-<plane.jpg, id=8, 455.7025pt x 289.08pt>
+<plane.jpg, id=3, 455.7025pt x 289.08pt>
 File: plane.jpg Graphic file (type jpg)
- <use plane.jpg>
-Package pdftex.def Info: plane.jpg used on input line 24.
+<use plane.jpg>
+Package pdftex.def Info: plane.jpg  used on input line 24.
 (pdftex.def)             Requested size: 179.5pt x 113.86995pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+ [1{C:/Users/Bruger/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
-Overfull \hbox (80.36407pt too wide) in paragraph at lines 51--51
-[] 
->>>>>>> b3f40b2c7c982b6a4e991849bc05ac3946228128
- []
-
-) [2 <./plane.jpg>] (./setup.tex
-
-<<<<<<< HEAD
-Overfull \hbox (82.41968pt too wide) detected at line 48
+Overfull \hbox (80.36407pt too wide) detected at line 51
 []
  []
 
+) [2 <./plane.jpg>] (setup.tex
 
-Overfull \hbox (33.40712pt too wide) detected at line 52
-[]
-=======
 LaTeX Warning: Reference `setup1' on page 1 undefined on input line 2.
 
 
 LaTeX Warning: Reference `setup2' on page 1 undefined on input line 2.
 
-<setup.jpg, id=42, 4175.6pt x 3131.7pt>
+<setup.jpg, id=37, 4175.6pt x 3131.7pt>
 File: setup.jpg Graphic file (type jpg)
- <use setup.jpg>
-Package pdftex.def Info: setup.jpg used on input line 7.
+<use setup.jpg>
+Package pdftex.def Info: setup.jpg  used on input line 7.
 (pdftex.def)             Requested size: 179.5pt x 79.57721pt.
-) (./data.tex
-<snell.jpg, id=44, 853.1875pt x 639.38875pt>
-File: snell.jpg Graphic file (type jpg)
- <use snell.jpg>
-Package pdftex.def Info: snell.jpg used on input line 6.
-(pdftex.def)             Requested size: 184.5pt x 138.26591pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 6--7
- [][] 
->>>>>>> b3f40b2c7c982b6a4e991849bc05ac3946228128
+Overfull \hbox (5.95674pt too wide) in paragraph at lines 14--15
+\T1/lmr/m/n/10.95 (-20) aligned in or-der to max-i-mize the amount
  []
 
-<reflection.jpg, id=45, 853.1875pt x 639.38875pt>
-File: reflection.jpg Graphic file (type jpg)
- <use reflection.jpg>
-Package pdftex.def Info: reflection.jpg used on input line 16.
-(pdftex.def)             Requested size: 184.5pt x 138.26591pt.
 
-<<<<<<< HEAD
-Overfull \hbox (42.82372pt too wide) detected at line 56
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+) [3
+
+ <./setup.jpg>] (data.tex
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5 ...rmine our refractive index of the glass {n_
+                                                  2} we have used a linear f...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.5 ...ine our refractive index of the glass {n_2}
+                                                   we have used a linear fit...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5 ..._2} we have used a linear fit between $\sin
+                                                  (\theta_1)$ - our incoming...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (50.6357pt too wide) in paragraph at lines 5--6
+\T1/lmr/m/n/10.95 (-20) the glass n$[]\OML/lmm/m/it/10.95 wehaveusedalinearfitb
+etween$$[]\OT1/lmr/m/n/10.95 (-20) (\OML/lmm/m/it/10.95 []\OT1/lmr/m/n/10.95 (
+-20) )$
+ []
+
+
+Overfull \hbox (5.01404pt too wide) in paragraph at lines 5--6
+\T1/lmr/m/n/10.95 (-20) - our in-com-ing an-gle - and $[]\OT1/lmr/m/n/10.95 (-2
+0) (\OML/lmm/m/it/10.95 []\OT1/lmr/m/n/10.95 (-20) )$\T1/lmr/m/n/10.95 (-20) ,
+ where
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+
+Overfull \hbox (1.25276pt too wide) detected at line 27
 []
  []
 
-) (setup.tex
-<setup.jpg, id=30, 4175.6pt x 3131.7pt>
-File: setup.jpg Graphic file (type jpg)
-<use setup.jpg>
-Package pdftex.def Info: setup.jpg  used on input line 5.
-(pdftex.def)             Requested size: 369.0pt x 276.72775pt.
-=======
-Overfull \hbox (5.0pt too wide) in paragraph at lines 16--17
- [][] 
- []
 
-<transmission.jpg, id=46, 853.1875pt x 639.38875pt>
-File: transmission.jpg Graphic file (type jpg)
- <use transmission.jpg>
-Package pdftex.def Info: transmission.jpg used on input line 28.
-(pdftex.def)             Requested size: 184.5pt x 138.26591pt.
->>>>>>> b3f40b2c7c982b6a4e991849bc05ac3946228128
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 28--29
- [][] 
+Overfull \hbox (5.8536pt too wide) in paragraph at lines 33--34
+\T1/lmr/m/n/10.95 (-20) gard-ing the re-flec-tion for our $\OML/lmm/m/it/10.95 
+p$\T1/lmr/m/n/10.95 (-20) -polarized
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (0.56393pt too wide) in paragraph at lines 33--34
+\OML/lmm/m/it/10.95 s$\T1/lmr/m/n/10.95 (-20) -polarized light, but un-for-tu-n
+ately the
+ []
 
-<<<<<<< HEAD
-) (data.tex) (discussion.tex) (conclusion.tex) [2]
-<logbook.pdf, id=43, 597.50829pt x 845.0471pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+
+ []
+
+[4]) [5
+
+] (discussion.tex) (conclusion.tex) [6
+
+
+]
+<logbook.pdf, id=63, 597.50829pt x 845.0471pt>
 File: logbook.pdf Graphic file (type pdf)
 <use logbook.pdf>
-Package pdftex.def Info: logbook.pdf  used on input line 42.
-=======
-) [3
-
- <./setup.jpg> <./snell.jpg> <./reflection.jpg>] [4
-
- <./transmission.jpg>]
-(./discussion.tex) (./conclusion.tex)
-<logbook.pdf, id=69, 597.50829pt x 845.0471pt>
-File: logbook.pdf Graphic file (type pdf)
- <use logbook.pdf>
-Package pdftex.def Info: logbook.pdf used on input line 46.
->>>>>>> b3f40b2c7c982b6a4e991849bc05ac3946228128
+Package pdftex.def Info: logbook.pdf  used on input line 46.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: logbook.pdf Graphic file (type pdf)
 <use logbook.pdf>
-<<<<<<< HEAD
-Package pdftex.def Info: logbook.pdf  used on input line 42.
+Package pdftex.def Info: logbook.pdf  used on input line 46.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<logbook.pdf, id=46, page=1, 597.50829pt x 845.0471pt>
-=======
-Package pdftex.def Info: logbook.pdf used on input line 46.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
- <logbook.pdf, id=72, page=1, 597.50829pt x 845.0471pt>
->>>>>>> b3f40b2c7c982b6a4e991849bc05ac3946228128
+<logbook.pdf, id=66, page=1, 597.50829pt x 845.0471pt>
 File: logbook.pdf Graphic file (type pdf)
 <use logbook.pdf, page 1>
-<<<<<<< HEAD
-Package pdftex.def Info: logbook.pdf , page1 used on input line 42.
+Package pdftex.def Info: logbook.pdf , page1 used on input line 46.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: logbook.pdf Graphic file (type pdf)
 <use logbook.pdf, page 1>
-Package pdftex.def Info: logbook.pdf , page1 used on input line 42.
+Package pdftex.def Info: logbook.pdf , page1 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: logbook.pdf Graphic file (type pdf)
 <use logbook.pdf, page 1>
-Package pdftex.def Info: logbook.pdf , page1 used on input line 42.
-=======
-Package pdftex.def Info: logbook.pdf, page1 used on input line 46.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: logbook.pdf Graphic file (type pdf)
- <use logbook.pdf, page 1>
-Package pdftex.def Info: logbook.pdf, page1 used on input line 46.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: logbook.pdf Graphic file (type pdf)
- <use logbook.pdf, page 1>
-Package pdftex.def Info: logbook.pdf, page1 used on input line 46.
->>>>>>> b3f40b2c7c982b6a4e991849bc05ac3946228128
+Package pdftex.def Info: logbook.pdf , page1 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: logbook.pdf Graphic file (type pdf)
 <use logbook.pdf, page 1>
-<<<<<<< HEAD
-Package pdftex.def Info: logbook.pdf , page1 used on input line 42.
+Package pdftex.def Info: logbook.pdf , page1 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: logbook.pdf Graphic file (type pdf)
 <use logbook.pdf, page 1>
-Package pdftex.def Info: logbook.pdf , page1 used on input line 42.
-=======
-Package pdftex.def Info: logbook.pdf, page1 used on input line 46.
+Package pdftex.def Info: logbook.pdf , page1 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: logbook.pdf Graphic file (type pdf)
- <use logbook.pdf, page 1>
-Package pdftex.def Info: logbook.pdf, page1 used on input line 46.
->>>>>>> b3f40b2c7c982b6a4e991849bc05ac3946228128
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [5
-
+ [7
 
  <./logbook.pdf>]
-<logbook.pdf, id=129, page=2, 597.50829pt x 845.0471pt>
+<logbook.pdf, id=124, page=2, 597.50829pt x 845.0471pt>
 File: logbook.pdf Graphic file (type pdf)
 <use logbook.pdf, page 2>
-<<<<<<< HEAD
-Package pdftex.def Info: logbook.pdf , page2 used on input line 42.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: logbook.pdf Graphic file (type pdf)
-<use logbook.pdf, page 2>
-Package pdftex.def Info: logbook.pdf , page2 used on input line 42.
+Package pdftex.def Info: logbook.pdf , page2 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: logbook.pdf Graphic file (type pdf)
 <use logbook.pdf, page 2>
-Package pdftex.def Info: logbook.pdf , page2 used on input line 42.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [4 <./logbook.pdf>]
-<logbook.pdf, id=124, page=3, 597.50829pt x 845.0471pt>
-=======
-Package pdftex.def Info: logbook.pdf, page2 used on input line 46.
+Package pdftex.def Info: logbook.pdf , page2 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: logbook.pdf Graphic file (type pdf)
- <use logbook.pdf, page 2>
-Package pdftex.def Info: logbook.pdf, page2 used on input line 46.
+<use logbook.pdf, page 2>
+Package pdftex.def Info: logbook.pdf , page2 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: logbook.pdf Graphic file (type pdf)
- <use logbook.pdf, page 2>
-Package pdftex.def Info: logbook.pdf, page2 used on input line 46.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-
-[6 <./logbook.pdf>] <logbook.pdf, id=150, page=3, 597.50829pt x 845.0471pt>
->>>>>>> b3f40b2c7c982b6a4e991849bc05ac3946228128
+ [8 <./logbook.pdf>]
+<logbook.pdf, id=145, page=3, 597.50829pt x 845.0471pt>
 File: logbook.pdf Graphic file (type pdf)
 <use logbook.pdf, page 3>
-<<<<<<< HEAD
-Package pdftex.def Info: logbook.pdf , page3 used on input line 42.
+Package pdftex.def Info: logbook.pdf , page3 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: logbook.pdf Graphic file (type pdf)
 <use logbook.pdf, page 3>
-Package pdftex.def Info: logbook.pdf , page3 used on input line 42.
+Package pdftex.def Info: logbook.pdf , page3 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: logbook.pdf Graphic file (type pdf)
 <use logbook.pdf, page 3>
-Package pdftex.def Info: logbook.pdf , page3 used on input line 42.
+Package pdftex.def Info: logbook.pdf , page3 used on input line 46.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [5 <./logbook.pdf>] [6
+ [9 <./logbook.pdf>]
 
- <./setup.jpg>]
-
-LaTeX Warning: Empty bibliography on input line 46.
-=======
-Package pdftex.def Info: logbook.pdf, page3 used on input line 46.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: logbook.pdf Graphic file (type pdf)
- <use logbook.pdf, page 3>
-Package pdftex.def Info: logbook.pdf, page3 used on input line 46.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: logbook.pdf Graphic file (type pdf)
- <use logbook.pdf, page 3>
-Package pdftex.def Info: logbook.pdf, page3 used on input line 46.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-
-[7 <./logbook.pdf>]
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/lmr/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-
-Overfull \hbox (3.85669pt too wide) in paragraph at lines 50--50
-\T1/lmr/m/it/10.95 (-20) tro-dy-nam-ics\T1/lmr/m/n/10.95 (-20) . Cam-bridge, 20
-17. \T1/lmr/m/sc/10.95 (-20) isbn\T1/lmr/m/n/10.95 (-20) :
- []
-
-
-Overfull \hbox (8.18315pt too wide) in paragraph at lines 50--50
-\T1/lmr/m/it/10.95 (-20) data\T1/lmr/m/n/10.95 (-20) . Aarhus Uni-ver-sitets-fo
-r-lag, 2012.
- []
->>>>>>> b3f40b2c7c982b6a4e991849bc05ac3946228128
+LaTeX Warning: Empty bibliography on input line 50.
 
 
 FiXme Summary: Number of notes: 1,
@@ -2677,21 +2579,14 @@ FiXme Summary: Number of notes: 1,
 (FiXme)        Number of fatal errors: 0,
 (FiXme)        Total: 1.
 
-<<<<<<< HEAD
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
 (repport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
+Package rerunfilecheck Info: File `repport.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
-
-Package rerunfilecheck Warning: File `repport.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `repport.out':
-(rerunfilecheck)             Before: CD50903B615EC88B32BC1486762FE044;49
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
 
 LaTeX Warning: There were undefined references.
 
@@ -2702,101 +2597,52 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                repport
 (biblatex)                and rerun LaTeX afterwards.
-=======
-[8
-
-
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
- (./repport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
-Package rerunfilecheck Info: File `repport.out' has not changed.
-(rerunfilecheck)             Checksum: 7EB6707A63159C23323BD40955EE4FD0;48.
-
-
-LaTeX Warning: There were undefined references.
->>>>>>> b3f40b2c7c982b6a4e991849bc05ac3946228128
 
 Package logreq Info: Writing requests to 'repport.run.xml'.
 \openout1 = `repport.run.xml'.
 
- ) 
-Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 37090 strings out of 493303
- 697950 string characters out of 3129349
- 1317512 words of memory out of 3000000
- 40066 multiletter control sequences out of 15000+200000
- 644968 words of font info for 133 fonts, out of 3000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 53i,18n,80p,10419b,1641s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{section*.4} has been referenced but does not exis
-t, replaced by a fixed one
+ )
+(\end occurred inside a group at level 1)
 
-{C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy
-.enc}{C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-r
-m.enc}{C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-
-mathit.enc}{C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/l
-m/lm-ts1.enc}{C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips
-/lm/lm-ec.enc} <C:\Users\Bruger\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
-en\ec\dpi600\ecrm1095.pk><C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/lm/lmbx10.pfb><C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Bruger/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Bruger/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Bruger/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/Bruger/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/Bruger/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Users/Bruger/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Users/Bruger/App
-Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/Bruger/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/Brug
-er/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Users/B
-ruger/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Us
-ers/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss9.pfb><C
-:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10
-.pfb><C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
-msy10.pfb><C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/lm/lmsy6.pfb><C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/lm/lmsy8.pfb><C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/lm/lmtk10.pfb><C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/lm/lmtt9.pfb>
-Output written on repport.pdf (6 pages, 3212361 bytes).
-PDF statistics:
- 197 PDF objects out of 1000 (max. 8388607)
- 15 named destinations out of 1000 (max. 500000)
- 42540 words of extra memory for PDF output out of 42996 (max. 10000000)
-=======
- 35184 strings out of 493013
- 645500 string characters out of 6135682
- 1265682 words of memory out of 5000000
- 38113 multiletter control sequences out of 15000+600000
- 128044 words of font info for 135 fonts, out of 8000000 for 9000
+### simple group (level 1) entered at line 5 ({)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 37148 strings out of 493303
+ 698510 string characters out of 3129349
+ 1316913 words of memory out of 3000000
+ 40067 multiletter control sequences out of 15000+200000
+ 646960 words of font info for 157 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,18n,80p,10417b,1491s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
-/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
--ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/l
-mr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/font
-s/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss9.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></us
-r/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/pub
-lic/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
-Output written on repport.pdf (8 pages, 3511329 bytes).
+ 53i,18n,80p,10419b,1723s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dv
+ips/lm/lm-mathsy.enc}{C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/e
+nc/dvips/lm/lm-rm.enc}{C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/
+enc/dvips/lm/lm-mathit.enc}{C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/f
+onts/enc/dvips/lm/lm-ec.enc}{C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/
+fonts/enc/dvips/lm/lm-ts1.enc}<C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Bruger/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Bruger/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Bruger/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Bruger/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/Bruger/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/Bruger/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Users/Bruger/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Users/Bruge
+r/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/Br
+uger/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users
+/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Us
+ers/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><
+C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss9.p
+fb><C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lms
+sbx10.pfb><C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/lm/lmsy10.pfb><C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/lm/lmsy6.pfb><C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/lm/lmsy8.pfb><C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/lm/lmtk10.pfb><C:/Users/Bruger/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/lm/lmtt9.pfb>
+Output written on repport.pdf (9 pages, 3240238 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 500000)
- 45638 words of extra memory for PDF output out of 51595 (max. 10000000)
->>>>>>> b3f40b2c7c982b6a4e991849bc05ac3946228128
+ 208 PDF objects out of 1000 (max. 8388607)
+ 22 named destinations out of 1000 (max. 500000)
+ 42543 words of extra memory for PDF output out of 42996 (max. 10000000)
 
