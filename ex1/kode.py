@@ -219,6 +219,7 @@ theta_ga = np.arange(0, n_crit, 0.01)
 theta_ga_2 = snellslaw(theta_ga, 1.5, 1)
 Ts_ga_theory = Ts1(theta_ga, theta_ga_2)
 Ts_ga_theory = Ts_ga_theory + np.ones(np.size(Ts_ga_theory))*0.04
+Rs_ga_theory = 1-Ts_ga_theory
 
 
 def poly1(x, a, b):
@@ -243,7 +244,10 @@ def spredning(X,Y,sds):
 yerr_pr1 = spredning(radians_pr1,Rp_pr1,sds)
 yerr_sr1 = spredning(radians_sr1, Rs_exp_ag, sds)
 yerr_pt1 = spredning(radians_pt1, Tp_pt1, sds)
-yerr_st1 = 
+yerr_st1 = spredning(radians_st1, Ts_exp_ag, sds)
+yerr_sr2 = spredning(radians_sr2, Rs_exp_ga, sds)
+yerr_st2 = spredning(radians_st2, Ts_exp_ga, sds)
+yerr_snell = spredning(sine1, sine2, np.sin(sds))
 
 
 # Data visualization
@@ -260,7 +264,7 @@ plt.grid()
 # Experimental
 plt.figure()
 #plt.plot(theta, Rs_ex)
-plt.errorbar(radians_pr1, Rp_pr1, xerr=0, yerr=yerr_pr1)
+plt.errorbar(radians_pr1, Rp_pr1, xerr=0, yerr=yerr_pr1, fmt='ro')
 plt.plot(theta1, Rs_theory)
 plt.plot(theta1, Rp_theory)
 plt.xlabel(r'Angles $\theta \ [\text{radians}]$')
@@ -270,10 +274,10 @@ plt.grid()
 
 #Transmission coefficients
 plt.figure()
-plt.plot(radians_st1, Ts_exp_ag, 'go')
+plt.errorbar(radians_st1, Ts_exp_ag, xerr=0, yerr=yerr_st1, fmt='ro')
 plt.plot(theta1, Ts_theory)
 plt.plot(theta1, Tp_theory)
-plt.plot(radians_pt1, Tp_pt1, 'ro')
+plt.errorbar(radians_pt1, Tp_pt1, xerr=0, yerr=yerr_pt1, fmt='go')
 plt.xlabel(r'Angles$\theta \ [\text{radians}]$')
 plt.ylabel('Ts/Tp')
 plt.title('Experimental plot (transmission)')
@@ -301,13 +305,26 @@ plt.grid()
 
 #Transmission glass to air 
 plt.figure()
-plt.plot(radians_st2, Ts_exp_ga, 'o')
+plt.errorbar(radians_st2, Ts_exp_ga, xerr=0, yerr=yerr_st2, fmt='ro')
+plt.errorbar(radians_sr2, Rs_exp_ga, xerr=0, yerr=yerr_sr2, fmt='go')
 plt.plot(theta_ga, Ts_ga_theory)
+plt.plot(theta_ga, Rs_ga_theory)
 plt.xlabel(r'Angles$\theta \ [\text{radians}]$')
 plt.ylabel('Ts')
 plt.title('Experimental plot (transmission)')
 plt.grid()
+
+#Reflection glass to air 
+plt.figure()
+plt.errorbar(radians_sr2, Rs_exp_ga, xerr=0, yerr=yerr_sr2, fmt='go')
+plt.plot(theta_ga, Rs_ga_theory)
+plt.xlabel(r'Angles$\theta \ [\text{radians}]$')
+plt.ylabel('Ts')
+plt.title('Experimental plot (reflection)')
+plt.grid()
+
 plt.show()
+
 
 
 
