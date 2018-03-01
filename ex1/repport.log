@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.19)  1 MAR 2018 21:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.19)  1 MAR 2018 21:58
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2153,64 +2153,107 @@ Package pdftex.def Info: plane.jpg used on input line 40.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Overfull \hbox (76.28796pt too wide) in paragraph at lines 60--60
-[] 
- []
-
-
-Overfull \hbox (38.0507pt too wide) in paragraph at lines 66--66
-[] 
- []
-
 [2 <./snellslaw.png> <./plane.jpg>]) (./setup.tex
+
+LaTeX Warning: Reference `setup1' on page 1 undefined on input line 2.
+
+
+LaTeX Warning: Reference `setup2' on page 1 undefined on input line 2.
+
 <setup.jpg, id=52, 4175.6pt x 3131.7pt>
 File: setup.jpg Graphic file (type jpg)
  <use setup.jpg>
 Package pdftex.def Info: setup.jpg used on input line 7.
 (pdftex.def)             Requested size: 179.5pt x 79.57721pt.
-) (./data.tex
-<snell.jpg, id=54, 853.1875pt x 639.38875pt>
-File: snell.jpg Graphic file (type jpg)
- <use snell.jpg>
-Package pdftex.def Info: snell.jpg used on input line 6.
-(pdftex.def)             Requested size: 184.5pt x 138.26591pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 6--7
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (5.95674pt too wide) in paragraph at lines 14--15
+\T1/lmr/m/n/10.95 (-20) aligned in or-der to max-i-mize the amount
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+[3 <./setup.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+) (./data.tex <snell.png, id=62, 614.295pt x 460.3599pt>
+File: snell.png Graphic file (type png)
+ <use snell.png>
+Package pdftex.def Info: snell.png used on input line 9.
+(pdftex.def)             Requested size: 184.5pt x 138.26357pt.
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 9--10
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<reflection.jpg, id=55, 853.1875pt x 639.38875pt>
+<reflection.jpg, id=63, 853.1875pt x 639.38875pt>
 File: reflection.jpg Graphic file (type jpg)
  <use reflection.jpg>
-Package pdftex.def Info: reflection.jpg used on input line 16.
+Package pdftex.def Info: reflection.jpg used on input line 19.
 (pdftex.def)             Requested size: 184.5pt x 138.26591pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 16--17
- [][] 
- []
-
-<transmission.jpg, id=56, 853.1875pt x 639.38875pt>
-File: transmission.jpg Graphic file (type jpg)
- <use transmission.jpg>
-Package pdftex.def Info: transmission.jpg used on input line 28.
-(pdftex.def)             Requested size: 184.5pt x 138.26591pt.
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 28--29
+Overfull \hbox (5.0pt too wide) in paragraph at lines 19--20
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./discussion.tex [3 <./setup.jpg> <./snell.jpg> <./reflection.jpg>])
-(./conclusion.tex) [4
+<transmission.jpg, id=64, 853.1875pt x 639.38875pt>
+File: transmission.jpg Graphic file (type jpg)
+ <use transmission.jpg>
+Package pdftex.def Info: transmission.jpg used on input line 31.
+(pdftex.def)             Requested size: 184.5pt x 138.26591pt.
 
- <./transmission.jpg>]
-<logbook.pdf, id=79, 597.50829pt x 845.0471pt>
+Overfull \hbox (5.0pt too wide) in paragraph at lines 31--32
+ [][] 
+ []
+
+[4 <./snell.png> <./reflection.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+Overfull \hbox (1.25276pt too wide) in paragraph at lines 60--60
+[] 
+ []
+
+
+Overfull \hbox (5.8536pt too wide) in paragraph at lines 66--67
+\T1/lmr/m/n/10.95 (-20) gard-ing the re-flec-tion for our $\OML/lmm/m/it/10.95 
+p$\T1/lmr/m/n/10.95 (-20) -polarized
+ []
+
+
+Overfull \hbox (0.56393pt too wide) in paragraph at lines 66--67
+\OML/lmm/m/it/10.95 s$\T1/lmr/m/n/10.95 (-20) -polarized light, but un-for-tu-n
+ately the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+[5 <./transmission.jpg>]) (./discussion.tex) (./conclusion.tex) [6]
+<logbook.pdf, id=94, 597.50829pt x 845.0471pt>
 File: logbook.pdf Graphic file (type pdf)
  <use logbook.pdf>
 Package pdftex.def Info: logbook.pdf used on input line 44.
@@ -2220,7 +2263,7 @@ File: logbook.pdf Graphic file (type pdf)
 <use logbook.pdf>
 Package pdftex.def Info: logbook.pdf used on input line 44.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
- <logbook.pdf, id=82, page=1, 597.50829pt x 845.0471pt>
+ <logbook.pdf, id=97, page=1, 597.50829pt x 845.0471pt>
 File: logbook.pdf Graphic file (type pdf)
 
 <use logbook.pdf, page 1>
@@ -2243,10 +2286,10 @@ File: logbook.pdf Graphic file (type pdf)
  <use logbook.pdf, page 1>
 Package pdftex.def Info: logbook.pdf, page1 used on input line 44.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [5
+ [7
 
  <./logbook.pdf>]
-<logbook.pdf, id=139, page=2, 597.50829pt x 845.0471pt>
+<logbook.pdf, id=155, page=2, 597.50829pt x 845.0471pt>
 File: logbook.pdf Graphic file (type pdf)
 
 <use logbook.pdf, page 2>
@@ -2261,7 +2304,7 @@ File: logbook.pdf Graphic file (type pdf)
 Package pdftex.def Info: logbook.pdf, page2 used on input line 44.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 
-[6 <./logbook.pdf>] <logbook.pdf, id=160, page=3, 597.50829pt x 845.0471pt>
+[8 <./logbook.pdf>] <logbook.pdf, id=177, page=3, 597.50829pt x 845.0471pt>
 File: logbook.pdf Graphic file (type pdf)
 
 <use logbook.pdf, page 3>
@@ -2276,7 +2319,7 @@ File: logbook.pdf Graphic file (type pdf)
 Package pdftex.def Info: logbook.pdf, page3 used on input line 44.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 
-[7 <./logbook.pdf>]
+[9 <./logbook.pdf>]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2299,7 +2342,7 @@ FiXme Summary: Number of notes: 0,
 (FiXme)        Number of fatal errors: 0,
 (FiXme)        Total: 0.
 
-[8
+[10
 
 
 
@@ -2310,17 +2353,21 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
 Package rerunfilecheck Info: File `repport.out' has not changed.
-(rerunfilecheck)             Checksum: 7EB6707A63159C23323BD40955EE4FD0;48.
+(rerunfilecheck)             Checksum: 8E1633ACA19331FECDBA922FB69918A0;49.
+
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'repport.run.xml'.
 \openout1 = `repport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35144 strings out of 493013
- 644554 string characters out of 6135682
- 1244099 words of memory out of 5000000
- 38056 multiletter control sequences out of 15000+600000
- 126222 words of font info for 145 fonts, out of 8000000 for 9000
+ 35183 strings out of 493013
+ 644971 string characters out of 6135682
+ 1247271 words of memory out of 5000000
+ 38059 multiletter control sequences out of 15000+600000
+ 127384 words of font info for 159 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,18n,80p,10417b,1493s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
@@ -2339,10 +2386,10 @@ ts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb>
 pe1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
-Output written on repport.pdf (8 pages, 3531279 bytes).
+Output written on repport.pdf (10 pages, 3476611 bytes).
 PDF statistics:
- 242 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
+ 261 PDF objects out of 1000 (max. 8388607)
+ 210 compressed objects within 3 object streams
+ 41 named destinations out of 1000 (max. 500000)
  43595 words of extra memory for PDF output out of 51595 (max. 10000000)
 
