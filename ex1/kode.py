@@ -26,6 +26,8 @@ plt.rc('text',usetex =True)
 plt.rc('font', **{'family' : "sans-serif"})
 
 # Definitions (formulaes)
+def radians(theta):
+    return (theta*np.pi)/180
 
 # Snells law
 def snellslaw(theta1, n1, n2):
@@ -110,60 +112,72 @@ for i in itteration:
     Rp_theory[i] = Rp(rp_theory[i])
 
 #theoretical transmission coefficients (mom's spaghetti)
+# T = 1 - R
 Ts_theory = np.ones(np.size(Rs_theory))-Rs_theory
 Tp_theory = np.ones(np.size(Rp_theory))-Rp_theory
 
 # Meassurements (raw data)
-Theta2 = np.array([2, 4, 5.5, 7, 9, 10.5, 12, 14, 16, 19, 22, 25.5, 28.5, 32, 37, 40, 45, 0])  # degrees
+# Importing data,  delimiter = ',',
+data = np.genfromtxt('data.csv', skip_header=3, comments="#", 
+        dtype="float").T
+print(data)
 
-# Error check for data
-if np.size(theta1) != np.size(theta2):
-    print('Mangler data for theta2')
+# P-polarization
 
+# Reflection
+# Angles
+theta_pr1 = data[0]
 
-#experimental data
+# Intensity (meassured - background)
+Int_use_pr1 = data[3]
 
-#air to glass
-
-#P-polarized light, reflection. 
-
-#angles
-
-theta_pr1 = np.array([5, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90])
-Int_pr1 = np.array([0.15, 0.2, 0.18, 0.13, 0.081, 0.022, 0.012, 0.041, 0.191, 0.49, 1.03, 1.86, 3.66, 4.5])
-Background_pr1 = 0.017*np.array([ 0.026, 0.023, 0.025, 0.021, 0.018, 0.015, 0.015, 0.018, 0.018, 0.015, 0.013, 0.012, 0.012, 0.013])
-
-Int_use_pr1 = Int_pr1-Background_pr1
+# Intensity at 90 degrees (last meassurement)
 Int_90 = Int_use_pr1[-1]
 
+# Meassurements divided by maximal angle
 Rp_pr1 = Int_use_pr1/Int_90
-
-def radians(theta):
-    return (theta*np.pi)/180
-
 radians_pr1 = radians(theta_pr1)
 
-#P-polarized, transmission
+# Transmission
 
-theta_pt1 = np.array([0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85])
-Int_pt1 = np.array([5.5, 5.15, 5.13, 5.17, 5.15, 5.13, 5.15, 5.13, 5.13, 5.13, 5.15, 5.15, 5.15, 5.15, 5.15, 4.6, 3.0, 0.84])
-Background_pt1 = np.ones(np.size(Int_pt1))*0.017
+# Angles
+theta_pt1 = np.arange(0, 85+1, 5)
 radians_pt1 = radians(theta_pt1)
 
+# Intensities (meassured)
+Int_pt1 = data[5]
+print(Int_pt1)
+#Int_pt1 = np.array([5.5, 5.15, 5.13, 5.17, 5.15, 5.13, 5.15, 5.13, 5.13, 5.13, 5.15, 5.15, 5.15, 5.15, 5.15, 4.6, 3.0, 0.84])
+
+# Backgroind intensity
+#Background_pt1 = np.ones(np.size(Int_pt1))*0.017
+
+# Meassurement minus intensity
 Int_use_pt1 = Int_pt1-Background_pt1
+
+# Refraction intensity at 0 degrees
 Int_0 = Int_use_pt1[0]
+
+# Meassurements divided by maximum refraction
 Tp_pt1 = Int_use_pt1/Int_0
+
+
+
 
 #S-polarised, reflection 
 
-theta_sr1 = np.array([20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80])
+theta_sr1 = np.arange(20, 80+1, 5)
 radians_sr1 = radians(theta_sr1)
+
 Int_sr1 = np.array([1.116, 1.216, 1.305, 1.606, 1.79, 2.268, 2.739, 3.6, 4.542, 5.159, 5.158, 5.158, 5.158])
 Background_sr1 = np.array([0.080, 0.068, 0.070, 0.071, 0.068, 0.068, 0.067, 0.066, 0.071, 0.070, 0.073, 0.072,0.07])
 
 Int_use_sr1 = Int_sr1-Background_sr1
 Int_90_sr1 = 20
 Rs_exp_ag = Int_use_sr1/Int_90_sr1
+
+
+
 
 
 #S-polarised, transmission
@@ -176,6 +190,10 @@ Background_st1 = np.array([0.05, 0.07, 0.08316, 0.05, 0.072, 0.0727, 0.062, 0.07
 Int_use_st1 = Int_st1-Background_st1
 Int_0 = Int_use_st1[0]
 Ts_exp_ag = Int_use_st1/Int_0
+
+
+
+
 
 #Glass to air 
 
@@ -200,7 +218,6 @@ Background_st2 = np.array([0.078, 0.072, 0.072, 0.072, 0.073, 0.073, 0.074, 0.08
 Int_use_st2 = Int_st2 - Background_st2
 Int_0_ga = Int_use_st2[0]
 Ts_exp_ga = Int_use_st2/Int_0_ga
-
 
 
 #refraction index
@@ -249,7 +266,6 @@ yerr_sr2 = spredning(radians_sr2, Rs_exp_ga, sds)
 yerr_st2 = spredning(radians_st2, Ts_exp_ga, sds)
 yerr_snell = spredning(sine1, sine2, np.sin(sds))
 
-
 # Data visualization
 # Theoretic
 plt.figure()
@@ -269,8 +285,9 @@ plt.plot(theta1, Rs_theory)
 plt.plot(theta1, Rp_theory)
 plt.xlabel(r'Angles $\theta \ [\text{radians}]$')
 plt.ylabel('Rs')
-plt.title('Experimental plot')
 plt.grid()
+plt.legend(loc=2)
+plt.savefig('reflection.jpg')
 
 #Transmission coefficients
 plt.figure()
@@ -280,8 +297,9 @@ plt.plot(theta1, Tp_theory)
 plt.errorbar(radians_pt1, Tp_pt1, xerr=0, yerr=yerr_pt1, fmt='go')
 plt.xlabel(r'Angles$\theta \ [\text{radians}]$')
 plt.ylabel('Ts/Tp')
-plt.title('Experimental plot (transmission)')
+plt.legend(loc=3)
 plt.grid()
+plt.savefig('transmission.jpg')
 
 #fuck-up graf
 
@@ -295,13 +313,14 @@ plt.grid()
 
 #Refraction index
 plt.figure()
-plt.plot(sine1,sine2,'bo')
-plt.plot(sine1, poly1(sine1, *popt))
+plt.title('Snells law')
+plt.plot(sine1,sine2,'bo', label='Data')
+plt.plot(sine1, poly1(sine1, *popt), label='Linear fit')
 plt.xlabel(r'Angles$\sin(\theta_1) \ [\text{radians}]$')
 plt.ylabel(r'Angles$\sin(\theta_2) \ [\text{radians}]$')
-plt.title('Snells law')
+plt.legend(loc=2)
 plt.grid()
-#plt.show()
+plt.savefig('snell.jpg')
 
 #Transmission glass to air 
 plt.figure()
@@ -324,7 +343,3 @@ plt.title('Experimental plot (reflection)')
 plt.grid()
 
 plt.show()
-
-
-
-

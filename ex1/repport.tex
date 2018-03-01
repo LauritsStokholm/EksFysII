@@ -2,7 +2,7 @@
 \usepackage{preamble}
 \usepackage{pdfpages}
 % EDIT PATH
-%\graphicspath\left\{ ./Graphics/}}
+\graphicspath{{./graphics/}}
 
 \title{The Fresnel Relations}
 \author{%
@@ -30,15 +30,19 @@
             \input{abstract}
         \end{onecolabstract}]
 \end{minipage}
+
 \saythanks{}
 \vspace{-1cm}
 \input{introduction}
 \input{theory}
+\clearpage
 \input{setup}
+\newpage
 \input{data}
+\clearpage
 \input{discussion}
 \input{conclusion}
-\newpage
+\clearpage
 \includepdf[pages={1-}]{logbook.pdf}
 
 \clearpage
