@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.19)  25 FEB 2018 15:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.19)  1 MAR 2018 20:26
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -702,67 +702,165 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 1--17
+./theory.tex:17: LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 \begin{figure}
+                   [h!]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no ] in font nullfont!
+./theory.tex:19: Undefined control sequence.
+l.19     \includegraphics
+                         [width=\columnwidth]{snellslaw}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+./theory.tex:19: Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.19     \includegraphics[width=\columnwidth]
+                                             {snellslaw}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./theory.tex:19: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.19     \includegraphics[width=\columnwidth]
+                                             {snellslaw}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no w in font nullfont!
+
+./theory.tex:20: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20     \caption
+                 {The angles}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no T in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+
+./theory.tex:22: LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \end{figure}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--23
 []
  []
 
 
-Overfull \hbox (4.6875pt too wide) in paragraph at lines 1--17
+Overfull \hbox (4.6875pt too wide) in paragraph at lines 1--23
 \OML/cmm/m/it/10 s$
  []
 
 
-Overfull \hbox (5.03125pt too wide) in paragraph at lines 1--17
+Overfull \hbox (5.03125pt too wide) in paragraph at lines 1--23
 \OML/cmm/m/it/10 p$
  []
 
 
-Overfull \hbox (4.97223pt too wide) in paragraph at lines 1--17
+Overfull \hbox (4.97223pt too wide) in paragraph at lines 1--23
 \OML/cmm/m/it/10 ^^R$
  []
 
 
-Overfull \hbox (9.18057pt too wide) in paragraph at lines 1--17
+Overfull \hbox (9.18057pt too wide) in paragraph at lines 1--23
 \OML/cmm/m/it/10 ^^R[]$
  []
 
 
-Overfull \hbox (9.18057pt too wide) in paragraph at lines 1--17
+Overfull \hbox (9.18057pt too wide) in paragraph at lines 1--23
 \OML/cmm/m/it/10 ^^R[]$
  []
 
 
-Overfull \hbox (15.52774pt too wide) in paragraph at lines 1--17
+Overfull \hbox (15.52774pt too wide) in paragraph at lines 1--23
 \OML/cmm/m/it/10 ^^R \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (9.18057pt too wide) in paragraph at lines 1--17
+Overfull \hbox (9.18057pt too wide) in paragraph at lines 1--23
 \OML/cmm/m/it/10 ^^R[]$
  []
 
 
-Overfull \hbox (35.62492pt too wide) in paragraph at lines 1--17
+Overfull \hbox (35.62492pt too wide) in paragraph at lines 1--23
 [] [] \OML/cmm/m/it/10 ^^R \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (35.2801pt too wide) in paragraph at lines 1--17
+Overfull \hbox (35.2801pt too wide) in paragraph at lines 1--23
 \OML/cmm/m/it/10 n[] [] []$
  []
 
 
-Overfull \hbox (10.48848pt too wide) in paragraph at lines 1--17
+Overfull \hbox (10.48848pt too wide) in paragraph at lines 1--23
 \OML/cmm/m/it/10 n[]$
  []
 
 
-Overfull \hbox (10.48848pt too wide) in paragraph at lines 1--17
+Overfull \hbox (10.48848pt too wide) in paragraph at lines 1--23
 \OML/cmm/m/it/10 n[]$
  []
 
-./theory.tex:18: Undefined control sequence.
-l.18 \subsection
+./theory.tex:24: Undefined control sequence.
+l.24 \subsection
                 {Polarization}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -771,13 +869,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./theory.tex:18: LaTeX Error: Missing \begin{document}.
+./theory.tex:24: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.18 \subsection{P
+l.24 \subsection{P
                   olarization}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -795,18 +893,18 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 18--19
+Overfull \hbox (20.0pt too wide) in paragraph at lines 24--25
 [] 
  []
 
 
-./theory.tex:20: LaTeX Error: Missing \begin{document}.
+./theory.tex:26: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.20 T
+l.26 T
       he plane spanned by the normal vector to our dielectric surface $\hat{...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1140,170 +1238,6 @@ Missing character: There is no z in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no . in font nullfont!
-
-./theory.tex:22: LaTeX Error: Environment figure undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.22 \begin{figure}
-                   [h]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-Missing character: There is no [ in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no ] in font nullfont!
-./theory.tex:24: Undefined control sequence.
-l.24     \includegraphics
-                         [width=\columnwidth]{plane}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no [ in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no = in font nullfont!
-./theory.tex:24: Missing number, treated as zero.
-<to be read again> 
-                   ]
-l.24     \includegraphics[width=\columnwidth]
-                                             {plane}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./theory.tex:24: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   ]
-l.24     \includegraphics[width=\columnwidth]
-                                             {plane}
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-Missing character: There is no ] in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-
-./theory.tex:25: LaTeX Error: \caption outside float.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25     \caption
-                 {P and S linear polarizations defined by their relative ori...
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no P in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no S in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no z in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no . in font nullfont!
-
-./theory.tex:27: LaTeX Error: \begin{document} ended by \end{figure}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.27 \end{figure}
-                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 Missing character: There is no L in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no g in font nullfont!
@@ -1541,82 +1475,82 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 20--30
+Overfull \hbox (20.0pt too wide) in paragraph at lines 26--30
 []
  []
 
 
-Overfull \hbox (6.38885pt too wide) in paragraph at lines 20--30
+Overfull \hbox (6.38885pt too wide) in paragraph at lines 26--30
 []$
  []
 
 
-Overfull \hbox (6.06941pt too wide) in paragraph at lines 20--30
+Overfull \hbox (6.06941pt too wide) in paragraph at lines 26--30
 []$
  []
 
 
-Overfull \hbox (13.03323pt too wide) in paragraph at lines 20--30
+Overfull \hbox (13.03323pt too wide) in paragraph at lines 26--30
 \OT1/cmr/m/it/10 the
  []
 
 
-Overfull \hbox (22.99986pt too wide) in paragraph at lines 20--30
+Overfull \hbox (22.99986pt too wide) in paragraph at lines 26--30
 \OT1/cmr/m/it/10 plane
  []
 
 
-Overfull \hbox (8.17773pt too wide) in paragraph at lines 20--30
+Overfull \hbox (8.17773pt too wide) in paragraph at lines 26--30
 \OT1/cmr/m/it/10 of
  []
 
 
-Overfull \hbox (12.26659pt too wide) in paragraph at lines 20--30
+Overfull \hbox (12.26659pt too wide) in paragraph at lines 26--30
 \OT1/cmr/m/it/10 in-
  []
 
 
-Overfull \hbox (11.24435pt too wide) in paragraph at lines 20--30
+Overfull \hbox (11.24435pt too wide) in paragraph at lines 26--30
 \OT1/cmr/m/it/10 ci-
  []
 
 
-Overfull \hbox (24.02203pt too wide) in paragraph at lines 20--30
+Overfull \hbox (24.02203pt too wide) in paragraph at lines 26--30
 \OT1/cmr/m/it/10 dence
  []
 
 
-Overfull \hbox (7.55551pt too wide) in paragraph at lines 20--30
+Overfull \hbox (7.55551pt too wide) in paragraph at lines 26--30
 []$
  []
 
 
-Overfull \hbox (7.55551pt too wide) in paragraph at lines 20--30
+Overfull \hbox (7.55551pt too wide) in paragraph at lines 26--30
 []$
  []
 
 
-Overfull \hbox (5.03125pt too wide) in paragraph at lines 20--30
+Overfull \hbox (5.03125pt too wide) in paragraph at lines 26--30
 \OML/cmm/m/it/10 p$
  []
 
 
-Overfull \hbox (7.55551pt too wide) in paragraph at lines 20--30
+Overfull \hbox (7.55551pt too wide) in paragraph at lines 26--30
 []$
  []
 
 
-Overfull \hbox (4.6875pt too wide) in paragraph at lines 20--30
+Overfull \hbox (4.6875pt too wide) in paragraph at lines 26--30
 \OML/cmm/m/it/10 s$
  []
 
 
-Overfull \hbox (4.6875pt too wide) in paragraph at lines 20--30
+Overfull \hbox (4.6875pt too wide) in paragraph at lines 26--30
 \OML/cmm/m/it/10 s$
  []
 
 
-Overfull \hbox (5.03125pt too wide) in paragraph at lines 20--30
+Overfull \hbox (5.03125pt too wide) in paragraph at lines 26--30
 \OML/cmm/m/it/10 p$
  []
 
