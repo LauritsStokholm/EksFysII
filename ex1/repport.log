@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.19)  25 FEB 2018 15:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.19)  1 MAR 2018 12:29
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2159,16 +2159,22 @@ Overfull \hbox (80.36407pt too wide) in paragraph at lines 51--51
 [] 
  []
 
-) [2 <./plane.jpg>] (./setup.tex <setup.jpg, id=42, 4175.6pt x 3131.7pt>
+) [2 <./plane.jpg>] (./setup.tex
+
+LaTeX Warning: Reference `setup1' on page 1 undefined on input line 2.
+
+
+LaTeX Warning: Reference `setup2' on page 1 undefined on input line 2.
+
+<setup.jpg, id=42, 4175.6pt x 3131.7pt>
 File: setup.jpg Graphic file (type jpg)
-
-<use setup.jpg>
-Package pdftex.def Info: setup.jpg used on input line 6.
+ <use setup.jpg>
+Package pdftex.def Info: setup.jpg used on input line 7.
 (pdftex.def)             Requested size: 179.5pt x 79.57721pt.
-) (./data.tex <snell.jpg, id=44, 853.1875pt x 639.38875pt>
+) (./data.tex
+<snell.jpg, id=44, 853.1875pt x 639.38875pt>
 File: snell.jpg Graphic file (type jpg)
-
-<use snell.jpg>
+ <use snell.jpg>
 Package pdftex.def Info: snell.jpg used on input line 6.
 (pdftex.def)             Requested size: 184.5pt x 138.26591pt.
 
@@ -2307,16 +2313,20 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
 Package rerunfilecheck Info: File `repport.out' has not changed.
 (rerunfilecheck)             Checksum: 7EB6707A63159C23323BD40955EE4FD0;48.
+
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'repport.run.xml'.
 \openout1 = `repport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
  35184 strings out of 493013
- 645494 string characters out of 6135682
- 1265686 words of memory out of 5000000
- 38111 multiletter control sequences out of 15000+600000
- 128127 words of font info for 136 fonts, out of 8000000 for 9000
+ 645500 string characters out of 6135682
+ 1265682 words of memory out of 5000000
+ 38113 multiletter control sequences out of 15000+600000
+ 128044 words of font info for 135 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,18n,80p,10417b,1491s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
@@ -2335,7 +2345,7 @@ s/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss9.pfb>
 pe1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
-Output written on repport.pdf (8 pages, 3522688 bytes).
+Output written on repport.pdf (8 pages, 3511329 bytes).
 PDF statistics:
  230 PDF objects out of 1000 (max. 8388607)
  185 compressed objects within 2 object streams

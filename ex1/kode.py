@@ -26,6 +26,8 @@ plt.rc('text',usetex =True)
 plt.rc('font', **{'family' : "sans-serif"})
 
 # Definitions (formulaes)
+def radians(theta):
+    return (theta*np.pi)/180
 
 # Snells law
 def snellslaw(theta1, n1, n2):
@@ -115,47 +117,40 @@ Ts_theory = np.ones(np.size(Rs_theory))-Rs_theory
 Tp_theory = np.ones(np.size(Rp_theory))-Rp_theory
 
 # Meassurements (raw data)
+# Importing data,  delimiter = ',',
+data = np.genfromtxt('data.csv', skip_header=3, comments="#", 
+        dtype="float").T
+print(data)
 
-# Second day of meassurements
-# P-polarized light, reflection. 
+# P-polarization
+
+# Reflection
 # Angles
-theta_pr1 = np.array([5, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90])
+theta_pr1 = data[0]
 
-# Intensity
-Int_pr1 = np.array([0.15, 0.2, 0.18, 0.13, 0.081, 0.022, 0.012, 0.041, 0.191, 0.49, 1.03, 1.86, 3.66, 4.5])
-
-# Background intensity (noise)
-Background_pr1 = 0.017*np.array([ 0.026, 0.023, 0.025, 0.021, 0.018, 0.015, 0.015, 0.018, 0.018, 0.015, 0.013, 0.012, 0.012, 0.013])
-
-# Intensity minus background
-Int_use_pr1 = Int_pr1 - Background_pr1
+# Intensity (meassured - background)
+Int_use_pr1 = data[3]
 
 # Intensity at 90 degrees (last meassurement)
 Int_90 = Int_use_pr1[-1]
 
 # Meassurements divided by maximal angle
 Rp_pr1 = Int_use_pr1/Int_90
-
-def radians(theta):
-    return (theta*np.pi)/180
-
 radians_pr1 = radians(theta_pr1)
 
-
-
-
-#P-polarized, transmission
+# Transmission
 
 # Angles
-theta_pt1 = np.array([0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85])
-#Converted to radians
+theta_pt1 = np.arange(0, 85+1, 5)
 radians_pt1 = radians(theta_pt1)
 
 # Intensities (meassured)
-Int_pt1 = np.array([5.5, 5.15, 5.13, 5.17, 5.15, 5.13, 5.15, 5.13, 5.13, 5.13, 5.15, 5.15, 5.15, 5.15, 5.15, 4.6, 3.0, 0.84])
+Int_pt1 = data[5]
+print(Int_pt1)
+#Int_pt1 = np.array([5.5, 5.15, 5.13, 5.17, 5.15, 5.13, 5.15, 5.13, 5.13, 5.13, 5.15, 5.15, 5.15, 5.15, 5.15, 4.6, 3.0, 0.84])
+
 # Backgroind intensity
-Background_pt1 = np.ones(np.size(Int_pt1))*0.017
-radians_pt1 = radians(theta_pt1)
+#Background_pt1 = np.ones(np.size(Int_pt1))*0.017
 
 # Meassurement minus intensity
 Int_use_pt1 = Int_pt1-Background_pt1
@@ -171,8 +166,9 @@ Tp_pt1 = Int_use_pt1/Int_0
 
 #S-polarised, reflection 
 
-theta_sr1 = np.array([20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80])
+theta_sr1 = np.arange(20, 80+1, 5)
 radians_sr1 = radians(theta_sr1)
+
 Int_sr1 = np.array([1.116, 1.216, 1.305, 1.606, 1.79, 2.268, 2.739, 3.6, 4.542, 5.159, 5.158, 5.158, 5.158])
 Background_sr1 = np.array([0.080, 0.068, 0.070, 0.071, 0.068, 0.068, 0.067, 0.066, 0.071, 0.070, 0.073, 0.072,0.07])
 
@@ -249,20 +245,41 @@ popt, pcov = opt.curve_fit(poly1, sine1, sine2)
 print(popt)
 n_2 = 1/popt[0]
 
-# Error (konfidensinterval)
-sds = 0.5
+#Spredninger er lort 
 
-#konf_minus = konf(theta1_pr1, Rp_pr1,sds)[0]
-#konf_plus  = konf(theta1_pr1, Rp_pr1,sds)[1]
-sigma = konf(theta_pr1, Rp_pr1,sds)
+sds = radians(3)
+
+def spredning(X,Y,sds):
+    diff_X = np.diff(Y)/np.diff(X)
+    print(diff_X)
+    sigma = np.zeros(np.size(X))
+    for i in range(0, np.size(diff_X)):
+        sigma[i] = np.sqrt((diff_X[i]*sds)**2)
+    return sigma
+
+yerr_pr1 = spredning(radians_pr1,Rp_pr1,sds)
+yerr_sr1 = spredning(radians_sr1, Rs_exp_ag, sds)
+yerr_pt1 = spredning(radians_pt1, Tp_pt1, sds)
+#yerr_st1 = 
+
+
+# Data visualization
+# Theoretic
+plt.figure()
+plt.plot(theta1, Rs_theory)
+plt.plot(theta1, Rp_theory)
+plt.xlabel(r'Angles $\theta \ [\text{radians}]$')
+plt.ylabel('Rs')
+plt.title('Theoretical plot')
+plt.grid()
+
 
 # Experimental
 plt.figure()
-plt.title('Experimental plot')
-#plt.plot(radians_pr1, Rp_pr1, 'ro', label='Data')
-plt.errorbar(radians_pr1, Rp_pr1, fmt = 'ko', xerr = sds, yerr = sigma)
-plt.plot(theta1, Rs_theory, label='Theoretical s-polarized')
-plt.plot(theta1, Rp_theory, label='Theoretical p-polarized')
+#plt.plot(theta, Rs_ex)
+plt.errorbar(radians_pr1, Rp_pr1, xerr=0, yerr=yerr_pr1)
+plt.plot(theta1, Rs_theory)
+plt.plot(theta1, Rp_theory)
 plt.xlabel(r'Angles $\theta \ [\text{radians}]$')
 plt.ylabel('Rs')
 plt.grid()
