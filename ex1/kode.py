@@ -281,6 +281,8 @@ plt.legend(loc='best')
 plt.xlim([-0.1, 1.6])
 plt.ylim([-0.1, 1.1])
 plt.grid()
+plt.savefig('pr1.png')
+
 
 #Transmission coefficients
 plt.figure()
@@ -295,8 +297,8 @@ plt.ylabel('Ts/Tp')
 plt.legend(loc='best')
 plt.xlim([-0.1, 1.6])
 plt.ylim([-0.1, 1.2])
-
 plt.grid()
+plt.savefig('pst1.png')
 
 #fuck-up graf
 
@@ -317,6 +319,7 @@ plt.ylabel(r'$\sin(\theta_2)$')
 plt.title('Snells law')
 plt.legend(loc='best')
 plt.grid()
+plt.savefig('snell.png')
 
 #Transmission glass to air 
 plt.figure()
@@ -328,6 +331,7 @@ plt.ylabel('Ts')
 plt.title('Glass to Air (Transmission)')
 plt.grid()
 plt.legend(loc='best')
+plt.savefig('Ts.png')
 plt.show()
 
 
