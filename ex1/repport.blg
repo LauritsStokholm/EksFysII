@@ -1,15 +1,15 @@
 [0] Config.pm:343> INFO - This is Biber 2.5
 [0] Config.pm:346> INFO - Logfile is 'repport.blg'
-[44] biber:290> INFO - === Sun Feb 18, 2018, 15:24:31
-[153] Biber.pm:352> INFO - Reading 'repport.bcf'
-[309] Biber.pm:774> INFO - Using all citekeys in bib section 0
-[321] Biber.pm:3494> INFO - Processing section 0
-[336] Biber.pm:3658> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[338] bibtex.pm:1176> INFO - Decoding LaTeX character macros into UTF-8
-[339] bibtex.pm:1037> INFO - Found BibTeX data source 'bibliography.bib'
-[371] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[371] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[371] Biber.pm:3307> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
-[371] Biber.pm:3311> INFO - No sort tailoring available for locale 'en-US'
-[373] bbl.pm:526> INFO - Writing 'repport.bbl' with encoding 'UTF-8'
-[380] bbl.pm:619> INFO - Output to repport.bbl
+[45] biber:290> INFO - === Thu Mar  1, 2018, 23:14:09
+[150] Biber.pm:352> INFO - Reading 'repport.bcf'
+[303] Biber.pm:774> INFO - Using all citekeys in bib section 0
+[314] Biber.pm:3494> INFO - Processing section 0
+[330] Biber.pm:3658> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[332] bibtex.pm:1176> INFO - Decoding LaTeX character macros into UTF-8
+[334] bibtex.pm:1037> INFO - Found BibTeX data source 'bibliography.bib'
+[365] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[365] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[366] Biber.pm:3307> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[366] Biber.pm:3311> INFO - No sort tailoring available for locale 'en-US'
+[368] bbl.pm:526> INFO - Writing 'repport.bbl' with encoding 'UTF-8'
+[374] bbl.pm:619> INFO - Output to repport.bbl
