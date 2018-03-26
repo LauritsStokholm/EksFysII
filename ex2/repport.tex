@@ -1,14 +1,17 @@
-\documentclass[a4paper, 11pt, onecolumn, oneside]{memoir}
+\documentclass[a4paper, twocolumn, 11pt, oneside]{memoir}
 \usepackage{preamble}
 \usepackage{pdfpages}
+\usepackage{authblk}
 % EDIT PATH
-\graphicspath{{./graphics/}}
+\graphicspath{{./Graphics/}}
 
-\title{The Fresnel Relations}
-\author{%
-    \textbf{Anne Kirstine Knudsen}\thanks{anne839i97@gmail.com}
-    \and \textbf{Laurits N. Stokholm}\thanks{201605496@post.au.dk}
-}
+\title{Interferometry}
+\author[1]{Anne Kirstine Knudsen \thanks{anne839i97@gmail.com}}
+\author[1]{Laurits N. Stokholm \thanks{201605496@post.au.dk}}
+\affil[1]{Institute of Physics and Astronomy, Aarhus University}
+\renewcommand{\Affilfont}{\itshape}
+
+
 \date{\today}
 
 % BibLateX
@@ -31,9 +34,7 @@
             \input{abstract}
         \end{onecolabstract}]
 \end{minipage}
-
 \saythanks{}
-\vspace{-1cm}
 \input{introduction}
 \input{theory}
 \input{setup}
