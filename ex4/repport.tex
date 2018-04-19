@@ -1,0 +1,46 @@
+\documentclass[a4paper, 11pt, onecolumn, oneside]{memoir}
+\usepackage{preamble}
+\usepackage{pdfpages}
+% EDIT PATH
+\graphicspath{{./graphics/}}
+
+\title{TITLE}
+\author{%
+    \textbf{Anne Kirstine Knudsen}\thanks{anne839i97@gmail.com}
+    \and \textbf{Laurits N. Stokholm}\thanks{201605496@post.au.dk}
+}
+\date{\today}
+
+% BibLateX
+\usepackage[backend=biber, style=authortitle, defernumbers=true, sorting=nty]{biblatex}
+\addbibresource{bibliography.bib}
+\defbibheading{secbib}[\bibname]{%
+    \section{#1}%
+    \markboth{#1}{#1}}
+
+
+
+\begin{document}
+% Title og Abstract
+% Ignorerer twocolumn til abstract
+\begin{minipage}{\textwidth}
+    \twocolumn[
+        \maketitle
+        \begin{onecolabstract}
+        \noindent
+            \input{abstract}
+        \end{onecolabstract}]
+\end{minipage}
+
+\saythanks{}
+\vspace{-1cm}
+\input{introduction}
+\input{theory}
+\input{setup}
+\input{data}
+\input{discussion}
+\input{conclusion}
+%\includepdf[pages={1-}]{logbook.pdf}
+\printbibliography[heading=subbibliography]{}
+\nocite{*}
+\end{document}

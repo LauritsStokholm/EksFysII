@@ -33,7 +33,7 @@ plt.rc('font', **{'family' : "sans-serif"})
 
 
 
-""" Experimental setup 2: Michelson Interferometer"""
+""" Experimental setup 3: Mach Zehnder Interferometer"""
 
 
 # Importing Data
