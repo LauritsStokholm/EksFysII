@@ -66,50 +66,36 @@ def myFunc(data_dir):
                      names=['Time', 'ChannelA', 'ChannelB'])
 
     # Unit Conversion
-    df.ChannelA = df.ChannelA * 10**-3
-    df.Time = df.Time * 10**-3 
-    
+    df.ChannelA = df.ChannelA.apply(lambda x: x*10**-3)
+    #df.CHannelB = df.ChannelB.apply(lambda x: x*10**-3)
+    df.Time = df.Time.apply(lambda x: x*10**-3)
+
     # Determining index of extremas
     min_index = df.ChannelB.idxmin()
     max_index = df.ChannelB.idxmax()
-    
+
     # Relations between indices (for appropriate plotting)
     low_index = min(min_index, max_index)
     high_index = max(min_index, max_index)
     
-    print('The extremas are')
-    print('Minima ' + str(min_index))
-    print('Maxima ' + str(max_index))
+    #print('The extremas are')
+    #print('Minima ' + str(min_index))
+    #print('Maxima ' + str(max_index))
     
     # Filtering data to first interval
     v_piezo   = df.ChannelB[low_index : high_index+1]
     intensity = df.ChannelA[low_index : high_index+1]
     
     # Smoothening intensity data by method
-    # # Creating column
     df['intensity_hat'] = pd.Series()
-    # # Using method
     df['intensity_hat'][low_index : high_index+1]=\
     pd.Series(sp.signal.savgol_filter(intensity, 51, 3))
-    # # Replaces NaN with 0
     df.fillna(0, inplace=True)
-    # # Name giving (unnecessary, but fine)
     intensity_hat = df.intensity_hat[low_index : high_index+1]
+
     
-    print('Smoothened column description')
-    print(intensity_hat.describe())
-     
-    # Visualisation (+ smoothening by method)
-    plt.figure()
-    plt.title('Data')
-    plt.xlabel('V piezo')
-    plt.ylabel('Intensity')
-    plt.plot(v_piezo, intensity)
-    plt.plot(v_piezo, intensity_hat, label='Savitzky Golay smoothening')
-    plt.grid()
-    plt.legend(loc=3)
-    
-    # Wavelenght of V
+    # Determining the wavelenght of V piezo
+
     # Defining orders for each data file
     # (how many points to consider on each side of extrema)
 
@@ -129,7 +115,9 @@ def myFunc(data_dir):
     # Determining relative extrema
     maximas = sp.signal.argrelextrema(np.array(intensity_hat),\
                                       np.greater, order=order_vals)
+    # Returns tuple, but we have only 1d array, so picking relevant data
     maximas = maximas[0]
+
 
     print('this is maximas ' + str(maximas))
 
@@ -161,21 +149,19 @@ def myFunc(data_dir):
         max_index1_hat = maximas[0]
         max_index2_hat = maximas[1]
     
-    print(max_index1_hat)
-    print(max_index2_hat)
-
-    print('HER')
-    print(max_index1_hat + low_index)
-    print(max_index2_hat + low_index)
+    #print('this is the relevant indices')
+    #print(max_index1_hat + low_index)
+    #print(max_index2_hat + low_index)
     
     # Visualisation of chosen indices
     idx1 = max_index1_hat + low_index
     idx2 = max_index2_hat + low_index
     
     plt.figure()
+    plt.grid()
     plt.title('Data')
-    plt.xlabel('x-values')
-    plt.ylabel('y-values')
+    plt.xlabel('Indices')
+    plt.ylabel('Intensity')
     intensity.plot()
     intensity_hat[max_index1_hat:max_index2_hat].plot()
     plt.plot([idx1, idx2],
@@ -186,14 +172,15 @@ def myFunc(data_dir):
     # dataframe corresponding index
     V1 = v_piezo[idx1]
     V2 = v_piezo[idx2]
+
     
     # Difference of piezo voltages (wavelength so to say)
     # and laser wavelength (We used a red HeNe-Laser)
-    lambda_signal = V2 - V1
+    lambda_signal = abs(V2 - V1)*10
     lambda_laser = 633 * 10**-9
     
     C = lambda_laser / (2 * lambda_signal)
-    plt.show()
+    #plt.show()
     return(C)
     
 
@@ -202,29 +189,14 @@ C = [x for x in range(len(data_dir))]
 C = []
 
 for i in range(len(data_dir)):
-    if '1_0' in data_dir[i]:
-        pass
-    elif '1_7' in data_dir[i]:
-        pass
-    elif '2_4' in data_dir[i]:
+    if any(s in data_dir[i] for s in ('1_0', '1_7', '2_4')):
         pass
     else:
         C.append(myFunc(data_dir[i]))
 
-C = np.average(np.array(C))
-print('The average of all determined Piezo constants are ' + str(C))
+print(C)
 
-
-
-
-#""" Experimental Setup 3: Mach Zehnder Interferometer """
-## Importing data:
-##data_path = os.path.join(os.getcwd(), 'DataII')
-##data_files = os.listdir(data_path)
-##
-##data_dir = os.path.join(data_path, data_files[1])
-##df = pd.read_csv(data_dir, skiprows=[1])
-###print(df.head())
-###print(df.Tid.head())
-##df.set_index('Tid', inplace=True)
-##df.plot()
+C_mean = np.average(np.array(C))
+C_std = np.std(C)
+print('The average of all determined Piezo constants are ' + str(C_mean))
+print('Uncertainty is ' + str(C_std))
