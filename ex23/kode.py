@@ -159,14 +159,14 @@ def myFunc(data_dir):
     
     plt.figure()
     plt.grid()
-    plt.title('Data')
+    plt.title('Data for %s' %(os.path.basename(data_dir)))
     plt.xlabel('Indices')
-    plt.ylabel('Intensity')
+    plt.ylabel('Channel A')
     intensity.plot()
     intensity_hat[max_index1_hat:max_index2_hat].plot()
     plt.plot([idx1, idx2],
              [intensity_hat[idx1], intensity_hat[idx2]],
-             marker='X', markersize=10, linestyle=' ')
+             marker='o', markersize=10, linestyle=' ')
     
     # Corresponding piezo voltages
     # dataframe corresponding index
@@ -180,7 +180,7 @@ def myFunc(data_dir):
     lambda_laser = 633 * 10**-9
     
     C = lambda_laser / (2 * lambda_signal)
-    #plt.show()
+    plt.show()
     return(C)
     
 
