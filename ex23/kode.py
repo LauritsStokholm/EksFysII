@@ -28,7 +28,7 @@ params = {'legend.fontsize'     : '20',
           }
 
 plt.rcParams.update(params)
-plt.rc('text',usetex =True)
+#plt.rc('text',usetex =True)
 plt.rc('font', **{'family' : "sans-serif"})
 
 
@@ -159,7 +159,7 @@ def myFunc(data_dir):
     
     plt.figure()
     plt.grid()
-    plt.title('Data for %s' %(os.path.basename(data_dir)))
+    plt.title('Data for ' + r"%s" %(os.path.basename(data_dir)))
     plt.xlabel('Indices')
     plt.ylabel('Channel A')
     intensity.plot()
@@ -180,6 +180,7 @@ def myFunc(data_dir):
     lambda_laser = 633 * 10**-9
     
     C = lambda_laser / (2 * lambda_signal)
+    plt.savefig('plot' + str(os.path.basename(data_dir) + '.png'))
     plt.show()
     return(C)
     

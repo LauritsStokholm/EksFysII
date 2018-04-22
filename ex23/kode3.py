@@ -65,17 +65,17 @@ df = pd.read_csv(data_file, skiprows=[0, 1, 2], names=['Time', 'ChannelA'])
 df['Data1'] = df.ChannelA.where(df.ChannelA.index < df.ChannelA.size/2)
 df['Data2'] = df.ChannelA.where(df.ChannelA.index > df.ChannelA.size/2)
 
-max_idx = df.Data1.idxmax()
-min_idx = df.Data1.idxmin()
-
-interval = abs(df.Data1.idxmax() - df.Data1.idxmin())
-#order_vals = interval/25
-order_vals = 1000
-print(order_vals)
-
+#max_idx = df.Data1.idxmax()
+#min_idx = df.Data1.idxmin()
+#
+#interval = abs(df.Data1.idxmax() - df.Data1.idxmin())
+##order_vals = interval/25
+#order_vals = 1000
+#print(order_vals)
+#
 #maximas1 = sp.signal.argrelmax(df.Data1.as_matrix(), order=order_vals)
 #maximas2 = sp.signal.argrelmax(df.Data2.as_matrix(), order=order_vals)
-#
+
 #maximas1 = maximas1[0]
 #maximas2 = maximas2[0]
 #print(maximas1)
@@ -84,7 +84,7 @@ print(order_vals)
 #xvals1 = df.Data1.loc(maximas1)
 
 plt.figure()
-plt.plot(df.Data1.index())
+#plt.plot(df.Data1.index())
 df.Data1.plot()
 df.Data2.plot()
 
