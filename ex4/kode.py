@@ -154,7 +154,6 @@ list_of_peaks = sp.signal.argrelextrema(x, np.less,
 list_of_peaks = [x for x in list_of_peaks if 295<x and x<1500]
 
 
-
 plt.figure()
 plt.title('Fraunhofer lines')
 plt.plot(list_of_peaks, df_intidx['solar2.csv'][list_of_peaks], 'ro')
@@ -175,37 +174,30 @@ plt.savefig('Fraunhofer')
 
 # # # # # # # # # # Part C ~ Absorbance of three cuvette# # # # # # # # # # # #
 #
-##for item in data_absorbance:
-##    cuvette = os.path.basename(item)
-##    plt.figure()
-##    df[cuvette].plot()
-##    plt.grid()
-##    plt.legend()
-##    plt.xlabel(r'Wavelength [\si{\nano\meter}]')
-##    plt.ylabel(r'Intensity')
-##    plt.xlim(180, 650)
-##
-##data_C = []
-##for item in data_absorbance:
-##    data_C.append(os.path.basename(item))
-##print(data_C)
-##
-##for item in data_C:
-##    plt.hold(True)
-##    df[item].plot()
-##    plt.grid()
-##    plt.legend()
-##    plt.xlabel(r'Wavelength [\si{\nano\meter}]')
-##    plt.ylabel(r'Intensity')
-##    plt.xlim(180, 650)
-#
-#
-#
-#
-#
-#
-#
-#plt.show()
- Changing index
-df1.drop(['wavelength'], axis=1, inplace=True)
+for item in data_absorbance:
+    print(item)
+    cuvette = os.path.basename(item)
+    plt.figure()
+    df_lamidx[cuvette].plot()
+    plt.grid()
+    plt.legend()
+    plt.xlabel(r'Wavelength [\si{\nano\meter}]')
+    plt.ylabel(r'Intensity')
+    plt.xlim(180, 650)
+
+data_C = []
+for item in data_absorbance:
+    data_C.append(os.path.basename(item))
+print(data_C)
+
+for item in data_C:
+    plt.figure()
+    df_lamidx[item].plot()
+    plt.grid()
+    plt.legend()
+    plt.xlabel(r'Wavelength [\si{\nano\meter}]')
+    plt.ylabel(r'Intensity')
+    plt.xlim(180, 650)
+
+plt.show()
 
