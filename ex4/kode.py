@@ -1,10 +1,16 @@
-# Preamble
+# # # # # # # # # # # # # # # Loading Libraries # # # # # # # # # # # # # # # # 
+
+# Usual mathematics
+import os
+import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 import scipy as sp
 from scipy.optimize import curve_fit
 from scipy import optimize as opt
 from scipy import stats 
+from scipy import signal
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-deep')
 
 # MatploLib koerer TeX
 params = {'legend.fontsize'     : '20',
@@ -25,314 +31,181 @@ plt.rcParams.update(params)
 plt.rc('text',usetex =True)
 plt.rc('font', **{'family' : "sans-serif"})
 
-# Definitions (formulaes)
+# # # # # # # # # # # # # # # # Importing Data # # # # # # # # # # # # # # # # 
+
+# Current working directory
+data_path = os.path.join(os.getcwd(), 'Data')
+
+# List of files in ./Data
+data_files = os.listdir(data_path)
+
+# Picking out .csv files (datafiles)
+data = [x for x in data_files if '.csv' in x]
+
+# Paths for chosen datafiles
+data_dir = [os.path.join(data_path, x) for x in data]
+
+# Sorting data for each part
+data_lamps = []
+data_solar = []
+data_absorbance = []
+
+for i in range(len(data_dir)):
+    if any(s in data_dir[i] for s in ('curly', 'notseethrough',
+        'seethrough')):
+        data_lamps.append(data_dir[i])
+    elif any(s in data_dir[i] for s in ('solar1', 'solar2', 'solar3')):
+        data_solar.append(data_dir[i])
+    elif any(s in data_dir[i] for s in ('A', 'B', 'C')):
+        data_absorbance.append(data_dir[i])
+    else:
+        pass
 
-# Snells law
-def snellslaw(theta1, n1, n2):
-    theta2 = np.arcsin(n1*np.sin(theta1)/n2)
-    return theta2
+data_A = data_lamps + data_solar
 
-# Brewsters Angle
-# Angle at which no light is reflected
-def brewsterangle(n1, n2):
-    return np.arctan(n2/n1)
+# # # # # # # # # # # # # # # # Dataframe # # # # # # # # # # # # # # # # # # # 
+# Preparing dataframe structure
+df = pd.DataFrame()
 
-# Critical angle
-# Angle for total internal reflection
-def criticalangle(n):
-    return np.arcsin(1/n)
+# Itterating over all .csv
+for i in range(len(data_dir)):
+    # Reading csv
+    column_names = ['wavelength', str(os.path.basename(data_dir[i]))]
+    df1 = pd.read_csv(data_dir[i], skiprows=[0], names=column_names)
 
-# Reflection parallel
-def rp(theta1, theta2):
-    return np.tan(theta1 - theta2) / np.tan(theta1 + theta2)
+    # Unit conversion
+    df1[column_names[0]] = df1[column_names[0]].apply(lambda x: x*10**-9)
+    df1[column_names[1]] = df1[column_names[1]].apply(lambda x: abs(x))
 
-# Transmitted parallel
-def tp(theta1, theta2):
-    return 2*np.cos(theta1)*np.sin(theta2)/(np.sin(theta1+theta2)*np.cos(theta1-theta2))
+    # Concatenating data
+    df = pd.concat([df, df1[column_names[1]]], axis=1)
 
+# Making two dataframes, one with integer indices and the other with lambda
+# integers. (We need integer index for scipy, but lambda is better for plot)
+df_intidx = pd.concat([df1[column_names[0]], df], axis=1)
+df_lamidx = df_intidx.copy()
+df_lamidx.set_index(df_lamidx[column_names[0]], inplace=True)
+df_lamidx.drop([column_names[0]], axis=1, inplace=True)
 
-# Reflected perpendicular
-def rs(theta1, theta2):
-    return -np.sin(theta1-theta2) / np.sin(theta1+theta2)
 
-# Transmitted perpendicular
-def ts(theta1, theta2):
-    return 2*np.cos(theta1)*np.sin(theta2)/np.sin(theta1+theta2)
 
-# Index for reflection parallel
-def Rp(rp):
-    return rp**2
+# # # # # # # # Part A ~ Light bulbs and the solar spectrum # # # # # # # # # #
 
-# Index for transmission parallel
-def Tp1(theta1, theta2):
-    return np.sin(2*theta1)*np.sin(2*theta2)/((np.sin(theta1 + theta2))**2 * (np.cos(theta1 - theta2))**2)
+# Determining the temperature
+def Temperature(df):
+    ''' This function will determine the temperature of the given spectra '''
 
+    # Determine peak of wavelength
+    lambda_peak = df.idxmax()
+    print(lambda_peak)
 
-def Tp2(theta1, theta2, n1, n2, tp):
-    return np.cos(theta2)/np.cos(theta1) * n2/n1 * tp**2
+    # Determine the temperature
+    constant = 2.898 * 10**-3 # m*K
+    temperature = constant / lambda_peak
+    return temperature
 
-# Index for reflection perpendicular
-def Rs(rs):
-    return rs**2
+# Sorting relevant files and calculating temperature
+T = []
+for column in df_lamidx:
+    if any(s for s in df_lamidx if column in ('solar1.csv', 'solar2.csv',
+        'solar3.csv', 'notseethrough.csv', 'seethrough.csv', 'curly.csv')):
+        T.append(column)
+        T.append(Temperature(df_lamidx[column]))
 
-# Index for transmission perpendicular
-def Ts1(theta1, theta2):
-    return np.sin(2*theta1)*np.sin(2*theta2)/(np.sin(theta1+theta2))**2
+print('The temperature is given by:')
+print(T)
 
-def Ts2(theta1, theta2, n1, n2, ts):
-    return np.cos(theta2)/np.cos(theta1) * n2/n1 * ts**2
 
-# Theoretical
-# Defining material constants
-n = np.array([1, 1.5])        # air, glass
+# Setting better indices for plot
+plot_index = pd.Series(df_lamidx.index)
+df_lamidx.set_index(plot_index.apply(lambda x: x*10**9), inplace=True)
 
-# Defining angles
-theta1 = np.arange(0, np.pi/2, 0.01) # degrees
-theta2 = np.zeros(np.size(theta1))
+# Compare results with solar spectra
+i = 0
+for item in data_lamps:
+    # the file name
+    lamp = os.path.basename(item)
 
-# Defining itterable matrices 
-rs_theory = np.zeros(np.size(theta1))
-rp_theory = np.zeros(np.size(theta1))
-Rs_theory = np.zeros(np.size(theta1))
-Rp_theory = np.zeros(np.size(theta1))
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    ax.set_title('Solar spectrum')
+    df_lamidx['solar1.csv'].plot()
+    df_lamidx['solar2.csv'].plot()
+    df_lamidx['solar3.csv'].plot()
+    df_lamidx[lamp].plot()
+    ax.grid()
+    ax.legend()
+    ax.set_xlabel(r'Wavelength [\si{\nano\meter}]')
+    ax.set_ylabel(r'Intensity')
+    plt.savefig("SolarComparison"+str(i))
 
-# Calculating theta2 from snell
-itteration = np.arange(1, np.size(theta1), 1)
-for angle in itteration:
-    theta2[angle] = snellslaw(theta1[angle], n[0], n[1])
+    # Do not run out of memory
+    #plt.close(fig)
+    i += 1
 
-# Calculating Rs and Rp for plot
-for i in itteration:
-    rs_theory[i] = rs(theta1[i], theta2[i])
-    Rs_theory[i] = Rs(rs_theory[i])
 
-    rp_theory[i] = rp(theta1[i], theta2[i])
-    Rp_theory[i] = Rp(rp_theory[i])
+# Determine elements in solar spectrum
 
-#theoretical transmission coefficients (mom's spaghetti)
-Ts_theory = np.ones(np.size(Rs_theory))-Rs_theory
-Tp_theory = np.ones(np.size(Rp_theory))-Rp_theory
+# Finding extrema
+x = np.array(df_intidx['solar2.csv'], dtype=np.float)
+order_val = 10
+list_of_peaks = sp.signal.argrelextrema(x, np.less,
+        order=order_val)[0].tolist()
+list_of_peaks = [x for x in list_of_peaks if 295<x and x<1500]
 
-# Meassurements (raw data)
-Theta2 = np.array([2, 4, 5.5, 7, 9, 10.5, 12, 14, 16, 19, 22, 25.5, 28.5, 32, 37, 40, 45, 0])  # degrees
 
-# Error check for data
-if np.size(theta1) != np.size(theta2):
-    print('Mangler data for theta2')
 
-
-#experimental data
-
-#air to glass
-
-#P-polarized light, reflection. 
-
-#angles
-
-theta_pr1 = np.array([5, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90])
-Int_pr1 = np.array([0.15, 0.2, 0.18, 0.13, 0.081, 0.022, 0.012, 0.041, 0.191, 0.49, 1.03, 1.86, 3.66, 4.5])
-Background_pr1 = 0.017*np.array([ 0.026, 0.023, 0.025, 0.021, 0.018, 0.015, 0.015, 0.018, 0.018, 0.015, 0.013, 0.012, 0.012, 0.013])
-
-Int_use_pr1 = Int_pr1-Background_pr1
-Int_90 = Int_use_pr1[-1]
-
-Rp_pr1 = Int_use_pr1/Int_90
-
-def radians(theta):
-    return (theta*np.pi)/180
-
-radians_pr1 = radians(theta_pr1)
-
-#P-polarized, transmission
-
-theta_pt1 = np.array([0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85])
-Int_pt1 = np.array([5.5, 5.15, 5.13, 5.17, 5.15, 5.13, 5.15, 5.13, 5.13, 5.13, 5.15, 5.15, 5.15, 5.15, 5.15, 4.6, 3.0, 0.84])
-Background_pt1 = np.ones(np.size(Int_pt1))*0.017
-radians_pt1 = radians(theta_pt1)
-
-Int_use_pt1 = Int_pt1-Background_pt1
-Int_0 = Int_use_pt1[0]
-Tp_pt1 = Int_use_pt1/Int_0
-
-#S-polarised, reflection 
-
-theta_sr1 = np.array([20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80])
-radians_sr1 = radians(theta_sr1)
-Int_sr1 = np.array([1.116, 1.216, 1.305, 1.606, 1.79, 2.268, 2.739, 3.6, 4.542, 5.159, 5.158, 5.158, 5.158])
-Background_sr1 = np.array([0.080, 0.068, 0.070, 0.071, 0.068, 0.068, 0.067, 0.066, 0.071, 0.070, 0.073, 0.072,0.07])
-
-Int_use_sr1 = Int_sr1-Background_sr1
-Int_90_sr1 = 20
-Rs_exp_ag = Int_use_sr1/Int_90_sr1
-
-
-#S-polarised, transmission
-
-theta_st1 = np.array([0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85,90])
-radians_st1 = radians(theta_st1)
-Int_st1 = np.array([1.12, 1.247, 1.1750, 1.102, 1.008, 1.019, 1.071, 1.05, 1.006, 0.997, 0.996, 0.931, 0.923, 0.873, 0.769, 0.657, 0.524, 0.357, 0.150])
-Background_st1 = np.array([0.05, 0.07, 0.08316, 0.05, 0.072, 0.0727, 0.062, 0.072, 0.062, 0.062, 0.066, 0.070, 0.070, 0.07, 0.074, 0.066, 0.07, 0.067, 0.065])
-
-Int_use_st1 = Int_st1-Background_st1
-Int_0 = Int_use_st1[0]
-Ts_exp_ag = Int_use_st1/Int_0
-
-#Glass to air 
-
-#S-polarized reflection:
-
-theta_sr2 = np.array([20, 25, 30, 35, 40, 45, 50, 55])
-radians_sr2 = radians(theta_sr2)
-Int_sr2 = np.array([0.2, 0.233, 0.316, 0.455, 1.043, 3.78, 4.06, 4.03])
-Background_sr2 = np.array([ 0.078, 0.071, 0.068, 0.067, 0.066, 0.070, 0.070, 0.070])
-
-Int_use_sr2 = Int_sr2-Background_sr2
-Int_90_sr2 = Int_use_sr2[-1]
-Rs_exp_ga = Int_use_sr2/Int_90_sr2
-
-#S-polarized transmission. 
-
-theta_st2 = np.array([0, 5, 10, 15, 20, 25, 30, 35, 40])
-radians_st2 = radians(theta_st2)
-Int_st2 = np.array([1.789, 1.739, 1.747, 1.794, 1.753, 1.717, 1.714, 1.575, 1.235])
-Background_st2 = np.array([0.078, 0.072, 0.072, 0.072, 0.073, 0.073, 0.074, 0.083, 0.070])
-
-Int_use_st2 = Int_st2 - Background_st2
-Int_0_ga = Int_use_st2[0]
-Ts_exp_ga = Int_use_st2/Int_0_ga
-
-
-
-#refraction index
-
-theta1_ref = np.array([0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85])
-theta2_ref = np.array([0, 2, 4, 5, 7, 8, 10, 12, 14, 16, 19, 21, 24, 26, 30, 33, 37, 40])
-radians1_ref = radians(theta1_ref)
-radians2_ref = radians(theta2_ref)
-sine1 = np.sin(radians1_ref)
-sine2 = np.sin(radians2_ref)
-
-#Theoretical glass to air transmission
-
-n_crit = criticalangle(1.5)
-theta_ga = np.arange(0, n_crit, 0.01)
-theta_ga_2 = snellslaw(theta_ga, 1.5, 1)
-Ts_ga_theory = Ts1(theta_ga, theta_ga_2)
-Ts_ga_theory = Ts_ga_theory + np.ones(np.size(Ts_ga_theory))*0.04
-
-
-def poly1(x, a, b):
-    return a*x+b
-
-popt, pcov = opt.curve_fit(poly1, sine1, sine2)
-print(popt)
-n_2 = 1/popt[0]
-print(n_2)
-
-# Vi bruger eksperimentelt index til teoretiske plots
-theta_ga_3 = snellslaw(theta_ga, n_2, 1)
-Ts_ga_theory3 = Ts1(theta_ga, theta_ga_3)
-Ts_ga_theory3 = Ts_ga_theory3 + np.ones(np.size(Ts_ga_theory3))*0.04
-
-
-#Spredninger er lort 
-
-sds = radians(3)
-
-def spredning(X,Y,sds):
-    diff_X = np.diff(Y)/np.diff(X)
-    print(diff_X)
-    sigma = np.zeros(np.size(X))
-    for i in range(0, np.size(diff_X)):
-        sigma[i] = np.sqrt((diff_X[i]*sds)**2)
-    return sigma
-
-yerr_pr1 = spredning(radians_pr1,Rp_pr1,sds)
-yerr_sr1 = spredning(radians_sr1, Rs_exp_ag, sds)
-yerr_pt1 = spredning(radians_pt1, Tp_pt1, sds)
-yerr_st1 = spredning(radians_st1, Ts_exp_ag, sds)
-
-yerr_st2 = spredning(radians_st2, Ts_exp_ga, sds)
-yerr_sr2 = spredning(radians_sr2, Rs_exp_ga, sds)
-yerr_snell = spredning(sine1, sine2, np.sin(sds))
-
-
-# Data visualization
-# Theoretic
-#plt.figure()
-#plt.plot(theta1, Rs_theory)
-#plt.plot(theta1, Rp_theory)
-#plt.xlabel(r'Angles $\theta \ [\text{radians}]$')
-#plt.ylabel('Rs')
-#plt.title('Theoretical plot')
-#plt.grid()
-
-
-# Experimental
 plt.figure()
-plt.title('Air to Glass (Reflection)')
-plt.xlabel(r'$\theta \ [\text{radians}]$')
-plt.ylabel('Rs')
-plt.errorbar(radians_pr1, Rp_pr1, xerr=sds, yerr=yerr_pr1, fmt='ro', label='Rp data')
-#plt.errorbar(radians_sr1, Rs_exp_ag, xerr=sds, yerr=yerr_sr1, fmt='bo',label='Rs data')
-plt.plot(theta1, Rs_theory, label='Rs theory')
-plt.plot(theta1, Rp_theory, label='Rp theory')
-plt.legend(loc='best')
-plt.xlim([-0.1, 1.6])
-plt.ylim([-0.1, 1.1])
+plt.title('Fraunhofer lines')
+plt.plot(list_of_peaks, df_intidx['solar2.csv'][list_of_peaks], 'ro')
+df_intidx['solar2.csv'].plot()
 plt.grid()
-plt.savefig('pr1.png')
+plt.legend()
+plt.xlabel(r"Wavelength [\si{\nano\meter}]")
+plt.ylabel(r"Intensity")
+
+print('Interesting wavelengths are')
+print(df_intidx.wavelength[list_of_peaks] * 10**9)
+plt.savefig('Fraunhofer')
 
 
-#Transmission coefficients
-plt.figure()
-plt.title('Air to Glass (Transmission)')
-plt.errorbar(radians_st1, Ts_exp_ag, xerr=sds, yerr=yerr_st1, fmt='bo', label='Ts data')
-plt.errorbar(radians_pt1, Tp_pt1, xerr=sds, yerr=yerr_pt1, fmt='ro', label='Tp data')
-plt.plot(theta1, Ts_theory, label='Ts theory')
-plt.plot(theta1, Tp_theory, label='Tp theory')
-
-plt.xlabel(r'$\theta \ [\text{radians}]$')
-plt.ylabel('Ts/Tp')
-plt.legend(loc='best')
-plt.xlim([-0.1, 1.6])
-plt.ylim([-0.1, 1.2])
-plt.grid()
-plt.savefig('pst1.png')
-
-#fuck-up graf
-
-#plt.figure()
-#plt.title('Air to Glass (Reflection)')
-#plt.errorbar(radians_sr1, Rs_exp_ag, xerr=sds, yerr=yerr_sr1, fmt='ro')
-#plt.plot(theta1, Rs_theory)
-#plt.xlabel(r'Angles$\theta \ [\text{radians}]$')
-#plt.ylabel('Rs')
-#plt.grid()
-
-#Refraction index
-plt.figure()
-plt.errorbar(sine1, sine2, xerr=sds, yerr=yerr_snell, fmt='ro', label='Data')
-plt.plot(sine1, poly1(sine1, *popt), label='Fit')
-plt.xlabel(r'$\sin(\theta_1)$')
-plt.ylabel(r'$\sin(\theta_2)$')
-plt.title('Snells law')
-plt.legend(loc='best')
-plt.grid()
-plt.savefig('snell.png')
-
-#Transmission glass to air 
-plt.figure()
-plt.errorbar(radians_st2, Ts_exp_ga, xerr=sds, yerr=yerr_st2,
-        fmt='ro',label='Ts data')
-plt.plot(theta_ga, Ts_ga_theory, label='Ts theory')
-plt.xlabel(r'$\theta \ [\text{radians}]$')
-plt.ylabel('Ts')
-plt.title('Glass to Air (Transmission)')
-plt.grid()
-plt.legend(loc='best')
-plt.savefig('Ts.png')
-plt.show()
+# # # # # # # # # # Part B ~ Spectral Lamps and Lasers # # # # # # # # # # # #
 
 
+
+# # # # # # # # # # Part C ~ Absorbance of three cuvette# # # # # # # # # # # #
+#
+##for item in data_absorbance:
+##    cuvette = os.path.basename(item)
+##    plt.figure()
+##    df[cuvette].plot()
+##    plt.grid()
+##    plt.legend()
+##    plt.xlabel(r'Wavelength [\si{\nano\meter}]')
+##    plt.ylabel(r'Intensity')
+##    plt.xlim(180, 650)
+##
+##data_C = []
+##for item in data_absorbance:
+##    data_C.append(os.path.basename(item))
+##print(data_C)
+##
+##for item in data_C:
+##    plt.hold(True)
+##    df[item].plot()
+##    plt.grid()
+##    plt.legend()
+##    plt.xlabel(r'Wavelength [\si{\nano\meter}]')
+##    plt.ylabel(r'Intensity')
+##    plt.xlim(180, 650)
+#
+#
+#
+#
+#
+#
+#
+#plt.show()
+ Changing index
+df1.drop(['wavelength'], axis=1, inplace=True)
 
