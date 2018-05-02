@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1525042815 "repport.tex" "repport.pdf" "repport" 1525042816
+["pdflatex"] 1525042997 "repport.tex" "repport.pdf" "repport" 1525042997
   "/etc/texmf/web2c/texmf.cnf" 1520269378 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1095.tfm" 1480098696 3584 929cdff2b7a8c11bd4d49fd68cb0ae70 ""
@@ -164,6 +164,7 @@
   "/usr/share/texmf/fonts/type1/public/lm/lmri10.pfb" 1254938640 112593 fda2373ba4420af33949610de4c28fe8 ""
   "/usr/share/texmf/fonts/type1/public/lm/lmss9.pfb" 1254938640 95954 039cb8d6009e8fc5ea194e3e167ecc5f ""
   "/usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb" 1254938640 119663 e82fa1a58f98ccd89bdbd77311ac9cf1 ""
+  "/usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb" 1254938640 27863 09ce3735688ffde955e72da27c95b61a ""
   "/usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb" 1254938640 28109 6d61305ed3d0eb794ebe36f15cf44aa0 ""
   "/usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb" 1254938640 27802 5c876bb2c4040caaf035d60bd74a86bd ""
   "/usr/share/texmf/tex/latex/lm/lmodern.sty" 1256929440 1606 c17281c7cff2bbd7ff0173e1433487ec ""
@@ -191,11 +192,12 @@
   "preamble.sty" 1525009523 4290 f4578aa84910d809aeeb824007d21474 ""
   "repport.aux" 1525042816 3104 0f93db43794245c140bb57a2321e6746 ""
   "repport.out" 1525042815 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "repport.tex" 1525042812 1067 14e623e8adcb8ba0b0c0098f24c95552 ""
+  "repport.tex" 1525042996 1067 14e623e8adcb8ba0b0c0098f24c95552 ""
   "setup.tex" 1524132189 29 5651653b6500c1ff28f0efed99abfe94 ""
-  "theory.tex" 1525042717 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "solarspectrum.jpg" 1524218276 187716 63ca1906c22c7ec9e00128067ad19827 ""
+  "theory.tex" 1525042940 991 0b8c2ba3bfc5f88968f87a76345e92d7 ""
   (generated)
-  "repport.aux"
+  "repport.pdf"
   "repport.log"
   "repport.out"
-  "repport.pdf"
+  "repport.aux"
