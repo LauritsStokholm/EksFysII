@@ -299,12 +299,13 @@ INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx10.tfm
 INPUT abstract.tex
 INPUT abstract.tex
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri10.tfm
+INPUT /usr/share/texmf/tex/latex/lm/t1lmss.fd
+INPUT /usr/share/texmf/tex/latex/lm/t1lmss.fd
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss10.tfm
 INPUT introduction.tex
 INPUT introduction.tex
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr12.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm
-INPUT /usr/share/texmf/tex/latex/lm/t1lmss.fd
-INPUT /usr/share/texmf/tex/latex/lm/t1lmss.fd
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmssbx10.tfm
 INPUT theory.tex
 INPUT theory.tex
@@ -329,6 +330,7 @@ INPUT SolarComparison2.png
 INPUT ./SolarComparison2.png
 INPUT ./SolarComparison2.png
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss9.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmro10.tfm
 INPUT Fraunhofer.png
 INPUT ./Fraunhofer.png
 INPUT ./Fraunhofer.png
@@ -336,7 +338,6 @@ INPUT discussion.tex
 INPUT discussion.tex
 INPUT conclusion.tex
 INPUT conclusion.tex
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmro10.tfm
 INPUT repport.aux
 INPUT ./repport.out
 INPUT ./repport.out
@@ -350,9 +351,11 @@ INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr17.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmr6.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr8.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr9.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmri10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmss10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmss9.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb

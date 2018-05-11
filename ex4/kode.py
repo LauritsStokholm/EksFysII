@@ -114,6 +114,7 @@ for column in df_lamidx:
 
 print('The temperature is given by:')
 print(T)
+print(np.average(np.array([T[1], T[-1], T[-3]])))
 
 
 # Setting better indices for plot
