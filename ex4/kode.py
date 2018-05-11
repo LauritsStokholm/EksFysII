@@ -149,15 +149,28 @@ for item in data_lamps:
 
 # Finding extrema
 x = np.array(df_intidx['solar2.csv'], dtype=np.float)
-order_val = 10
+order_val = 40
 list_of_peaks = sp.signal.argrelextrema(x, np.less,
         order=order_val)[0].tolist()
 list_of_peaks = [x for x in list_of_peaks if 295<x and x<1500]
 
 
+x_val = list_of_peaks
+y_val = df_intidx['solar2.csv'][list_of_peaks]
+labels = ['Fe', 'Fe/Ca', 'Mg/Fe', 'Na', 'O_2', 'O_2', 'O_2', 'O_2']
+
+# Making plot with labels at scatterplot
 plt.figure()
 plt.title('Fraunhofer lines')
-plt.plot(list_of_peaks, df_intidx['solar2.csv'][list_of_peaks], 'ro')
+plt.scatter(x_val, y_val, marker='o', color='red')
+
+# For name in labels
+for label, x, y in zip(labels, x_val, y_val):
+    plt.annotate(label,
+		xy=(x, y), xytext=(-20, 20),
+        textcoords='offset points', ha='right', va='bottom',
+        bbox=dict(boxstyle='round,pad=0.5', fc='red', alpha=0.5),
+        arrowprops=dict(arrowstyle = '->', connectionstyle='arc3,rad=0'))
 df_intidx['solar2.csv'].plot()
 plt.grid()
 plt.legend()
@@ -176,29 +189,32 @@ plt.savefig('Fraunhofer')
 # # # # # # # # # # Part C ~ Absorbance of three cuvette# # # # # # # # # # # #
 #
 for item in data_absorbance:
-    print(item)
     cuvette = os.path.basename(item)
+    print(item)
+    print(cuvette)
     plt.figure()
     df_lamidx[cuvette].plot()
     plt.grid()
+    plt.title('Spectrum of cuvette ' + str(cuvette[0]))
     plt.legend()
     plt.xlabel(r'Wavelength [\si{\nano\meter}]')
     plt.ylabel(r'Intensity')
     plt.xlim(180, 650)
-
-data_C = []
-for item in data_absorbance:
-    data_C.append(os.path.basename(item))
-print(data_C)
-
-for item in data_C:
-    plt.figure()
-    df_lamidx[item].plot()
-    plt.grid()
-    plt.legend()
-    plt.xlabel(r'Wavelength [\si{\nano\meter}]')
-    plt.ylabel(r'Intensity')
-    plt.xlim(180, 650)
+    plt.savefig('abs'+cuvette[0])
 
 plt.show()
+#data_C = []
+#for item in data_absorbance:
+#    data_C.append(os.path.basename(item))
+#print(data_C)
+
+#for item in data_C:
+#    plt.figure()
+#    df_lamidx[item].plot()
+#    plt.grid()
+#    plt.legend()
+#    plt.xlabel(r'Wavelength [\si{\nano\meter}]')
+#    plt.ylabel(r'Intensity')
+#    plt.xlim(180, 650)
+
 

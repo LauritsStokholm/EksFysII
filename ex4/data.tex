@@ -5,16 +5,26 @@ For this part, we plotted the meassured intensity of the light as a function of
 wavelengths, and determined at which index of wavelength, the peak of highest
 intensity was at. This wavelength corresponds to a temperature as described in
 \cref{eq:wien} to calculate the temperature $T$.
-
-\begin{equation}
-    T_{\text{H}} = \SI{4736}{\kelvin}, \quad T_{\text{D}} =
-    \SI{4842}{\kelvin}, \quad T_{\text{E}} = \SI{4829}{\kelvin}
-\end{equation}
-For the three meassurements of the solar spectrum, we took an average, of which
-holds a temperature of
-\begin{equation}
-5663
-\end{equation}
+For the three meassurements of the solar spectrum, we took an average. All the
+temperatures are shown in \cref{tab:temp}.
+\begin{table}[h]
+\centering
+\begin{tabular}[h]{lr}
+\toprule
+Source & Temperature\\
+\midrule
+Halogen       & $\SI{4736}{\kelvin}$\\
+Diode         & $\SI{4842}{\kelvin}$\\
+Energy-saving & $\SI{4829}{\kelvin}$\\
+Solar average & $\SI{5663}{\kelvin}$\\
+\bottomrule
+\end{tabular}
+\caption{Surface temperatures of the given sources, as determined by wiens
+displacement law.}
+\label{tab:temp}
+\end{table}
+Our meassurements of the three lamps are shown compared to the three solar
+spectra on \cref{diode}, \cref{halogen} and \cref{Energy-saving}.
 
 \begin{figure}[h!]
 \centering
@@ -39,12 +49,28 @@ the sun.}
 \end{figure}
 
 \subsubsection{Comparison}
-\fxnote{HERE}
+The question is, which of our three lamps best represtent the solar spectrum.
+From the three figures \cref{diode}, \cref{halogen} and \cref{Energy-saving},
+it can be seen, that:
+
+\paragraph{diode}
+This spectrum is discrete. Some of the wavelengths are similar to that of the
+solar, but it is certainly not a blackbody.
+
+\paragraph{halogen}
+This spectrum has its peak displaced further into the yellow color, whereas the
+sun has a greenish peak. Nonetheless, it is certainly a better approximation
+than that of the diode.
+
+\paragraph{energy-saving}
+This spectrum has its peak nearest that of the solar spectrum, and thus shares
+the same color. Though it has a smaller full-width-half-maxima than that of the
+halogen lamp.
 
 \subsection{Fraunhofer lines}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.5\textwidth]{Fraunhofer}
+\includegraphics[width=0.65\textwidth]{Fraunhofer}
 \caption{The Solar spectra with the local extrema points used for
 classification of the Fraunhofer lines}
 \label{frauenhofer}
@@ -52,3 +78,26 @@ classification of the Fraunhofer lines}
 
 Comparing the found extremas with the Fraunhofer lines, we have meassured the
 following
+
+\subsection{DEL 2: ENERGY TABEL.. AK}
+
+\subsection{Absorption Spectroscopy}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.65\textwidth]{absA}
+\caption{Spectrum of cuvette A: This might just be Rhodamine 6G}
+\label{fig:absA}
+\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.65\textwidth]{absB}
+\caption{Spectrum of cuvette B. As this seems different from all spectra of
+figure 13 (in lab guide), this might just be Kaliumhexacyanoferrat (III)}
+\label{fig:absB}
+\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.65\textwidth]{absC}
+\caption{Spectrum of cuvette C. This might just be DCM}
+\label{fig:absC}
+\end{figure}
