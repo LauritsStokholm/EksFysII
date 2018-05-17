@@ -1,10 +1,9 @@
 # Fdb version 3
-["biber repport"] 1526044600 "repport.bcf" "repport.bbl" "repport" 1526048932
-  "repport.bcf" 1526048622 94529 9bcc51fa4e13d19f6a7e22a11584442a ""
+["biber repport"] 1526566434 "repport.bcf" "repport.bbl" "repport" 1526567674
+  "repport.bcf" 1526567621 94529 9bcc51fa4e13d19f6a7e22a11584442a ""
   (generated)
   "repport.bbl"
-  "repport.blg"
-["pdflatex"] 1526048619 "repport.tex" "repport.pdf" "repport" 1526048932
+["pdflatex"] 1526567674 "repport.tex" "repport.pdf" "repport" 1526567674
   "/etc/texmf/web2c/texmf.cnf" 1520269378 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1095.tfm" 1480098696 3584 929cdff2b7a8c11bd4d49fd68cb0ae70 ""
@@ -209,23 +208,24 @@
   "absB.png" 1526048246 46299 2aa064e9e810ea04ce172775af6d6418 ""
   "absC.png" 1526048245 40512 5c01f1aea44ea2455c876f6307f609f3 ""
   "abstract.tex" 1526039130 732 66e5f5bf96bf5bf405cc1aa5dce34a36 ""
+  "bilag.tex" 1526567673 4081 e1a777fe0a1b844a9ef111ce5815011a ""
   "conclusion.tex" 1524132189 21 5263826852d7c88eadf74b948137ff83 ""
-  "data.tex" 1526048774 3261 c418975737b3521865a26e638925b0f1 ""
-  "discussion.tex" 1524132189 21 bc2321953236e49c0a923bd0e83c84e8 ""
+  "data.tex" 1526566593 5399 fc1b98e14fcb1e7100a9dd6adc1500f4 ""
+  "discussion.tex" 1526563757 1956 d1f338780a6a6344c1f967c41bcf7bbb ""
   "introduction.tex" 1526041251 1294 dba941e572ae0263cf7cd1f45c5c2cc8 ""
-  "preamble.sty" 1526042827 4241 bb30e1357013b260fc19f11ee00f2a4e ""
-  "repport.aux" 1526048621 6663 304ac2c27c3c9f99ac8fe51e5e6daf5e ""
-  "repport.bbl" 1526044600 466 87c763802318ca007e475d2fb9c40fb5 "biber repport"
-  "repport.out" 1526048620 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "repport.run.xml" 1526048622 2336 3ed51b4ecceb0bb7a082e883680f74e0 ""
-  "repport.tex" 1526046202 1082 7a73617642731644ea68b28074d2140a ""
+  "preamble.sty" 1526564550 4241 bb30e1357013b260fc19f11ee00f2a4e ""
+  "repport.aux" 1526567621 6885 58724bd9f77890c0accb4438766055c4 ""
+  "repport.bbl" 1526566435 466 87c763802318ca007e475d2fb9c40fb5 "biber repport"
+  "repport.out" 1526567620 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "repport.run.xml" 1526567621 2336 3ed51b4ecceb0bb7a082e883680f74e0 ""
+  "repport.tex" 1526566635 1118 61c44d24e898eedb8f4d320d59f5d4e6 ""
   "setup.tex" 1524132189 29 5651653b6500c1ff28f0efed99abfe94 ""
   "solarspectrum.jpg" 1524218276 187716 63ca1906c22c7ec9e00128067ad19827 ""
   "theory.tex" 1526043056 3255 5f47ed5eaaa02405bab950fda519163f ""
   (generated)
-  "repport.pdf"
-  "repport.out"
   "repport.aux"
   "repport.run.xml"
   "repport.log"
+  "repport.out"
   "repport.bcf"
+  "repport.pdf"
